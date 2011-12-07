@@ -25,7 +25,7 @@ $index-bar-bg-color: hsla(hue($base-color), 10%, 60%, .8) !default;
  * @member Ext.IndexBar
  * @xtype indexbar
  */
-$index-bar-color: darken(desaturate($base-color, 5%), 15%) !default;
+$index-bar-color: #FFFFFF !default;
 
 /**
  * Includes default index bar styles.

@@ -1,0 +1,379 @@
+
+	/*//////   Informations Headerbar    //////*/
+	.disaster_topcontainer_header {
+		width: 100%;
+		padding-left:4%;
+		padding-top:.14em;
+		padding-bottom:.15em;
+		color: white;
+		font-size: 0.9em;
+		font-weight: bold;
+	  	text-shadow: rgba(0, 0, 0, 0.9) 0 -0.08em 0;
+		background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(2%, #444444), color-stop(100%, #222222));
+		float: left;
+	}
+	/*//////  RecentActivity Headerbar   //////*/
+	.disaster_activitycontainer_header {
+		width: 100%;
+		padding-left:4%;
+		padding-top:.14em;
+		padding-bottom:.15em;
+		color: white;
+		font-size: 0.9em;
+		font-weight: bold;
+	  	text-shadow: #00346a 0 -0.08em 0;
+		background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(2%, #16a4ff), color-stop(100%, #006ad7));
+		float: left;
+	}
+	
+/*/////////////////////////////////////////*/
+/*//////      For iPhone & iPad      //////*/
+/*/////////////////////////////////////////*/
+@media screen and (max-width: 750px) {
+
+	/*//////    Disaster TopContainer    //////*/
+	.disaster_detail_topbartitle {
+		font-size: .9em;
+	}
+	.disaster_topcontainer {
+		width: 100%;
+		height: 39%;
+		background: url(../assets/img/backgrounds/disaster_topcontainer_bg.jpg);
+		float:left;
+	}
+
+	/*////////     Disaster's Photo     ///////*/
+	.disasterPhoto_container {
+		width: 37.5%;
+		height: 100%;
+		float: left;
+	}
+	.disasterPhoto_frame {
+		margin-top: 8.5%; 
+		margin-left: 7.5%;
+		margin-bottom: 6.5%;
+		margin-right: 7.5%;
+		width: 85%;
+		height: 85%;
+		background: white;
+		-webkit-border-radius: 0.75em;
+		-webkit-box-shadow: rgba(10, 10, 10, 0.7) 0 0.5em 0.6em;
+	}
+
+	/*//////////    Disaster's Name    ////////*/
+	.disasterName_container {
+		width: 62.5%;
+		margin-top: 2%;
+		padding-left: 0.5%;
+		float: right;
+	}
+	.disaster_name {
+		display:block;
+		font-size: 70%;
+		line-height: 33px;
+		font-weight: bold;
+		color: white;
+		text-shadow: #000000 0 .15em .25em;
+		float: left;	
+	}
+	.disater_place_icon {
+		width: 20px;
+		height: 20px;
+		margin-right: 7px;
+		margin-top: 7px;
+		background: url(../assets/img/disaster_detail/disaster_place_icon_s.png);
+		float: left;
+	}
+	.disaster_country_flag {
+		margin-left: 10px;
+		margin-top: -30px;
+		width: 14px !important;
+		height: 14px !important;
+		float:right;
+	}
+	.disaster_type {
+		display:block;
+		width:100%;
+		font-size: 70%;
+		line-height: 22px;
+		font-weight: bold;
+		color: white;
+		text-shadow: #000000 0 .15em .25em;
+		float: left;
+	}
+	.disater_type_icon {
+		width: 20px;
+		height: 20px;
+		margin-right: 7px;
+		background: url(../assets/img/disaster_detail/disaster_type_icon_s.png);
+		float: left;
+	}
+	.disaster_date {
+		display:block;
+		width:100%;
+		font-size: 60%;
+		line-height: 22px;
+		font-weight: normal;
+		color: white;
+		text-shadow: #000000 0 .15em .25em;
+		float: left;
+	}
+	.disater_date_icon {
+		width: 20px;
+		height: 23px;
+		margin-right: 7px;
+		background: url(../assets/img/disaster_detail/disaster_date_icon_s.png);
+		float: left;
+	}
+
+	/*//////////    Disaster's Stats    ////////*/
+	.disaster_stats_container {
+		width: 59.5%;
+		height: 30%;
+		margin-top:1.40%;
+		margin-bottom: 5%;
+		margin-right: 3%;
+	  	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #DDDDDD), color-stop(80%, #AAAAAA));
+		border: 1px solid #222222;
+		-webkit-border-radius: 0.5em;
+		-webkit-box-shadow: inset #FFFFFF 0 1px 0  , rgba(10, 10, 10, 0.4) 0 0.3em 0.6em;
+		float:right;
+	}
+	
+}
+
+/*/////////////////////////////////////////*/
+/*//////         For Desktop         //////*/
+/*/////////////////////////////////////////*/
+@media screen and (min-width: 750px) {
+	
+	/*//////    Disaster TopContainer    //////*/
+	.disaster_detail_topbartitle {
+		font-size: 1em;
+	}
+	.disaster_topcontainer {
+		width: 100%;
+		height: 35%;
+		background: url(../assets/img/backgrounds/disaster_topcontainer_bglarge.jpg);
+		float:left;
+	}
+
+	/*////////     Disaster's Photo     ///////*/
+	.disasterPhoto_container {
+		width: 37.5%;
+		height: 100%;
+		float: left;
+	}
+	.disasterPhoto_frame {
+		margin-top: 8.5%; 
+		margin-left: 7.5%;
+		margin-bottom: 6.5%;
+		margin-right: 7.5%;
+		width: 85%;
+		height: 85%;
+		background: white;
+		-webkit-border-radius: 0.75em;
+		-webkit-box-shadow: rgba(10, 10, 10, 0.7) 0 0.5em 0.6em;
+	}
+	
+	/*//////////    Disaster's Name    ////////*/
+	.disasterName_container {
+		width: 62.5%;
+		margin-top: 3%;
+		padding-left: 0.5%;
+		float: right;
+	}
+	.disaster_name {
+		display:block;
+		font-size: 160%;
+		font-weight: bold;
+		color: white;
+		text-shadow: #000000 0 .15em .25em;
+		float: left;	
+	}
+	.disater_place_icon {
+		width: 25px;
+		height: 29px;
+		margin-right: 7px;
+		margin-top: 7px;
+		background: url(../assets/img/disaster_detail/disaster_place_icon.png);
+		float: left;
+	}
+	.disaster_country_flag {
+		margin-left: 10px;
+		margin-top: -30px;
+		width: 40px !important;
+		height: 40px !important;
+		float:right;
+	}
+	.disaster_type {
+		display:block;
+		width:100%;
+		margin-top: 1%;
+		font-size: 120%;
+		line-height: 24px;
+		font-weight: bold;
+		color: white;
+		text-shadow: #000000 0 .1em .25em;
+		float: left;
+	}
+	.disater_type_icon {
+		width: 25px;
+		height: 29px;
+		margin-right: 7px;
+		background: url(../assets/img/disaster_detail/disaster_type_icon.png);
+		float: left;
+	}
+	.disaster_date {
+		display:block;
+		width:100%;
+		margin-top: 2.4%;
+		margin-bottom: 2.4%;
+		font-size: 85%;
+		line-height: 26px;
+		font-weight: normal;
+		color: white;
+		text-shadow: #000000 0 .15em .25em;
+		float: left;
+	}
+	.disater_date_icon {
+		width: 25px;
+		height: 29px;
+		margin-right: 7px;
+		background: url(../assets/img/disaster_detail/disaster_date_icon.png);
+		float: left;
+	}
+	
+	/*//////////    Disaster's Stats    ////////*/
+	.disaster_stats_container {
+		width: 59.5%;
+		height: 44%;
+		margin-bottom: 4%;
+		margin-right: 3%;
+	  	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #DDDDDD), color-stop(80%, #AAAAAA));
+		border: 1px solid #222222;
+		-webkit-border-radius: 0.75em;
+		-webkit-box-shadow: inset #FFFFFF 0 1px 0  , rgba(10, 10, 10, 0.4) 0 0.3em 0.6em;
+		float:right;
+	}
+
+}
+
+
+/*/////////////////////////////////////////*/
+/*//////         For Desktop         //////*/
+/*/////////////////////////////////////////*/
+@media screen and (min-width: 780px) {
+	
+	/*//////    Disaster TopContainer    //////*/
+	.disaster_detail_topbartitle {
+		font-size: 1em;
+	}
+	.disaster_topcontainer {
+		width: 100%;
+		height: 80%;
+		background: url(../assets/img/backgrounds/disaster_topcontainer_bglarge.jpg);
+		float:left;
+	}
+
+	/*////////     Disaster's Photo     ///////*/
+	.disasterPhoto_container {
+		width: 37.5%;
+		height: 100%;
+		float: left;
+	}
+	.disasterPhoto_frame {
+		margin-top: 8.5%; 
+		margin-left: 7.5%;
+		margin-bottom: 6.5%;
+		margin-right: 7.5%;
+		width: 85%;
+		height: 85%;
+		background: white;
+		-webkit-border-radius: 0.75em;
+		-webkit-box-shadow: rgba(10, 10, 10, 0.7) 0 0.5em 0.6em;
+	}
+	
+	/*//////////    Disaster's Name    ////////*/
+	.disasterName_container {
+		width: 62.5%;
+		margin-top: 3%;
+		margin-bottom: 3%;
+		padding-left: 0.5%;
+		float: right;
+	}
+	.disaster_name {
+		display:block;
+		font-size: 160%;
+		font-weight: bold;
+		color: white;
+		text-shadow: #000000 0 .15em .25em;
+		float: left;	
+	}
+	.disater_place_icon {
+		width: 25px;
+		height: 29px;
+		margin-right: 7px;
+		margin-top: 7px;
+		background: url(../assets/img/disaster_detail/disaster_place_icon.png);
+		float: left;
+	}
+	.disaster_country_flag {
+		margin-left: 10px;
+		margin-top: -30px;
+		width: 40px !important;
+		height: 40px !important;
+		float:right;
+	}
+	.disaster_type {
+		display:block;
+		width:100%;
+		margin-top: 1%;
+		font-size: 120%;
+		line-height: 24px;
+		font-weight: bold;
+		color: white;
+		text-shadow: #000000 0 .1em .25em;
+		float: left;
+	}
+	.disater_type_icon {
+		width: 25px;
+		height: 29px;
+		margin-right: 7px;
+		background: url(../assets/img/disaster_detail/disaster_type_icon.png);
+		float: left;
+	}
+	.disaster_date {
+		display:block;
+		width:100%;
+		margin-top: 2.4%;
+		margin-bottom: 2.4%;
+		font-size: 85%;
+		line-height: 26px;
+		font-weight: normal;
+		color: white;
+		text-shadow: #000000 0 .15em .25em;
+		float: left;
+	}
+	.disater_date_icon {
+		width: 25px;
+		height: 29px;
+		margin-right: 7px;
+		background: url(../assets/img/disaster_detail/disaster_date_icon.png);
+		float: left;
+	}
+	
+	/*//////////    Disaster's Stats    ////////*/
+	.disaster_stats_container {
+		width: 59.5%;
+		height: 49%;
+		margin-bottom: 4%;
+		margin-right: 3%;
+	  	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #DDDDDD), color-stop(80%, #AAAAAA));
+		border: 1px solid #222222;
+		-webkit-border-radius: 0.75em;
+		-webkit-box-shadow: inset #FFFFFF 0 1px 0  , rgba(10, 10, 10, 0.4) 0 0.3em 0.6em;
+		float:right;
+	}
+
+}

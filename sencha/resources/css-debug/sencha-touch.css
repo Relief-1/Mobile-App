@@ -3549,7 +3549,7 @@ input, textarea {
   width: 1.65em;
   height: 1.65em;
   display: block;
-  margin: .4em auto .1em;
+  margin: .2em auto .1em;
   position: relative;
 }
 /* line 201, ../themes/stylesheets/sencha-touch/default/widgets/_tabs.scss */
@@ -3557,6 +3557,7 @@ input, textarea {
   margin: 0;
   font-size: 9px;
   line-height: 12px;
+  margin-bottom: .3em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -3659,14 +3660,14 @@ input, textarea {
 
 /* line 256, ../themes/stylesheets/sencha-touch/default/widgets/_tabs.scss */
 .x-tabbar-dark {
-  background-color: #141e29;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #466890), color-stop(2%, #1f2f41), color-stop(100%, #080c11));
-  background-image: linear-gradient(#466890, #1f2f41 2%, #080c11);
-  border-color: #0c1118;
+  background-color: #111111;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #AAAAAA), color-stop(2%, #333333), color-stop(100%, #000000));
+  background-image: linear-gradient(#AAAAAA, #333333 2%, #000000);
+  border-color: #000000;
 }
 /* line 260, ../themes/stylesheets/sencha-touch/default/widgets/_tabs.scss */
 .x-tabbar-dark .x-tab {
-  color: #5a81af;
+  color: #666666;
 }
 /* line 264, ../themes/stylesheets/sencha-touch/default/widgets/_tabs.scss */
 .x-tabbar-dark .x-tab-active {
@@ -3679,26 +3680,27 @@ input, textarea {
 
 /* line 275, ../themes/stylesheets/sencha-touch/default/widgets/_tabs.scss */
 .x-tabbar-dark.x-docked-bottom .x-tab {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 .8em 0;
 }
 /* line 277, ../themes/stylesheets/sencha-touch/default/widgets/_tabs.scss */
 .x-tabbar-dark.x-docked-bottom .x-tab img {
   background-color: #354f6e;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7c9bc0), color-stop(2%, #416086), color-stop(100%, #293e56));
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #666666), color-stop(100%, #333333));
   background-image: linear-gradient(#7c9bc0, #416086 2%, #293e56);
 }
 /* line 282, ../themes/stylesheets/sencha-touch/default/widgets/_tabs.scss */
 .x-tabbar-dark.x-docked-bottom .x-tab-active {
   background-color: #1c2a3a;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4e74a2), color-stop(2%, #283b52), color-stop(100%, #111922));
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #afeaff), color-stop(2%, #31d5fe), color-stop(100%, #016feb));
   background-image: linear-gradient(#4e74a2, #283b52 2%, #111922);
-  text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 .08em 0;
+  border: solid .1em #003e86;
 }
 /* line 286, ../themes/stylesheets/sencha-touch/default/widgets/_tabs.scss */
 .x-tabbar-dark.x-docked-bottom .x-tab-active img {
-  background-color: #0a7aff;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #57a3ff), color-stop(50%, #2488ff), color-stop(51%, #0a7aff), color-stop(100%, #006df0));
-  background-image: linear-gradient(#57a3ff, #2488ff 50%, #0a7aff 51%, #006df0);
+  background-color: #000000;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #222222), color-stop(90%, #000000));
+  background-image: linear-gradient(#222222, #000000);
 }
 
 /* line 296, ../themes/stylesheets/sencha-touch/default/widgets/_tabs.scss */
@@ -3732,7 +3734,7 @@ input, textarea {
 }
 /* line 49, ../themes/stylesheets/sencha-touch/default/widgets/_toolbar.scss */
 .x-toolbar.x-docked-top {
-  border-bottom: .1em solid;
+  border-bottom: .09em solid;
 }
 /* line 53, ../themes/stylesheets/sencha-touch/default/widgets/_toolbar.scss */
 .x-toolbar.x-docked-bottom {
@@ -3755,10 +3757,10 @@ input, textarea {
 
 /* line 96, ../themes/stylesheets/sencha-touch/default/widgets/_toolbar.scss */
 .x-toolbar-dark {
-  background-color: #24364c;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5a81af), color-stop(2%, #304864), color-stop(100%, #192533));
-  background-image: linear-gradient(#5a81af, #304864 2%, #192533);
-  border-color: black;
+  	background-color: #333333;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #AAAAAA), color-stop(2%, #333333), color-stop(100%, #000000));
+	background-image: linear-gradient(#AAAAAA, #333333 2%, #000000);
+	border-top: .05em solid black;
 }
 /* line 100, ../themes/stylesheets/sencha-touch/default/widgets/_toolbar.scss */
 .x-toolbar-dark .x-toolbar-title {
@@ -3818,7 +3820,7 @@ input, textarea {
   border-top-color: #0c1118;
   color: white;
   text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 0.1em 0;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 0.05em 0;
 }
 /* line 57, ../themes/stylesheets/sencha-touch/default/_mixins.scss */
 .x-toolbar-light .x-button.x-button-back:before, .x-toolbar-light .x-button.x-button-forward:before, .x-toolbar .x-toolbar-light .x-button.x-button-back:before, .x-toolbar .x-toolbar-light .x-button.x-button-forward:before, .x-toolbar-light .x-field-select .x-input-text.x-button-back:before, .x-toolbar-light .x-field-select .x-input-text.x-button-forward:before, .x-toolbar .x-toolbar-light .x-field-select .x-input-text.x-button-back:before, .x-toolbar .x-toolbar-light .x-field-select .x-input-text.x-button-forward:before, .x-toolbar-light .x-field-select:before.x-button-back:before, .x-toolbar-light .x-field-select:before.x-button-forward:before, .x-toolbar .x-toolbar-light .x-field-select:before.x-button-back:before, .x-toolbar .x-toolbar-light .x-field-select:before.x-button-forward:before {
@@ -4041,22 +4043,23 @@ input, textarea {
 
 /* line 51, ../themes/stylesheets/sencha-touch/default/widgets/_indexbar.scss */
 .x-indexbar-body {
-  padding: .3em 0;
+  padding: .5em 0;
 }
 
 /* line 55, ../themes/stylesheets/sencha-touch/default/widgets/_indexbar.scss */
 .x-indexbar-pressed .x-indexbar-body {
   -webkit-border-radius: 0.75em;
   border-radius: 0.75em;
-  background-color: rgba(143, 152, 163, 0.8);
+  color: #FFFFFF;
+  background-color: rgba(60, 60, 60, 0.8);
 }
 
 /* line 60, ../themes/stylesheets/sencha-touch/default/widgets/_indexbar.scss */
 .x-indexbar-item {
-  color: #1e2a38;
+  color: #999999;
   font-size: 0.6em;
   text-align: center;
-  line-height: 1.1em;
+  line-height: 1.3em;
   font-weight: bold;
   display: block;
 }
@@ -4068,29 +4071,28 @@ input, textarea {
 }
 /* line 97, ../themes/stylesheets/sencha-touch/default/widgets/_list.scss */
 .x-list .x-list-disclosure {
+  position: relative;
+  left:-0.9em;
+  top:-0.5em;
   overflow: visible;
-  -webkit-mask: 0 0 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpFNkNCM0JGNTZFMjI2ODExQkNGQjkwMzk3MDc3MkZFQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3M0MzQUU1QUFDQkQxMURGOEQ2MUVDMjM0MzY2NTBDQSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3M0MzQUU1OUFDQkQxMURGOEQ2MUVDMjM0MzY2NTBDQSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU3Q0IzQkY1NkUyMjY4MTFCQ0ZCOTAzOTcwNzcyRkVCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU2Q0IzQkY1NkUyMjY4MTFCQ0ZCOTAzOTcwNzcyRkVCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+uoWjuwAACh9JREFUeNrUm2toVdkVx7eJRqPRaHzFGBOjidGYaLQaX9GREXXAkloYQVpT+qFYBkcqLS0zTKFQWpwv86F0KLRfHFqnWDq0UCsMFYqlqHSwGo2v4Du+X9FoNL5P12/N3rLn9Cb33HNvrnHDujfnnHvO2f+91l57/dfaGWBe8xYEQUq/H5ilftWIVIoU2+Ov2e/jIt0inSKnRVpEnvdlR/oK8CKRt0QaRd4QyU3hXkDvFvmXyOeZHoABGXzWWJF3RL4rUuFfKC4uNmPHjjUjRozQ44kTJ+r3jRs3zNOnT013d7e5deuWuXTpknnx4oV/602RP4n8TqQ1EyadCcBlIh9YoHmcqKioMFOnTjXl5eVm1KhR5smTJwrs+fPnCohvOjpw4ECTk5Ojwt/5+fnmzp075vr16+bkyZPm1KlT/nv+KvJLkf++KsCAe89KPidmz55t5s6dawoLC839+/fNo0ePFCwgHjx4oMe0u3fv6vfw4cNNbm6uGTRokCkoKNDBycvLU+DDhg3TQTp27Jg5fPiwuXfvnnvvJyI/EunIJmCczqci1RzMmzfPLFiwQF9Ox65cuWKuXr2qZoqk0ikGa/z48WbcuHFm0qRJOihDhw41LS0tZu/evToI1sl9W2RXNgC/K/IRGp42bZpZsmSJasSZ4fnz51WbmWiDBw9W0NXV1TrvOd6zZ49pbX05nd8XwB/2FWA87a+tYzKLFi0yixcvVoCY3NmzZ8MOJ6OttLRUpwy+4dy5c2bnzp3u0h9FvifAuzMJmPm6Q+SbHGzYsEHn3P79+83Ro0fVCWWrVVZWmqVLl+rfO3bsUA8v7QuRbwjoa5l6z2/xD7KsBJs3bw7WrVsXiINh8rwSGTJkSLBmzRrtS1lZmTv/H5wnc7o3iTpnA1k69AXLli0LZAmJ1VGeQWfFEek3x3FBc684ymDLli0+6E/TBfymyDMeJmasL4jbSe4bPXp0MGvWLJX6+vpAApJAlqTYoAcMGBDU1NQEmzZtCsRxuvPvxQVM7Hubh4gnDsRJxdYsInM+kOUrkHVXj/lmAGVOBuJ909K0rBZBc3OzO4eCmuIA/jcPkEAiWLVqVVqdQjA7WWLc8TZ3ns7W1tYGstaqxuI8m8GbM2dOIKuGO3dDpCAVwCw9QUlJSbB+/XrfXGLLzJkzffMtFNko8pjjyZMnq4njFONOGRSyevVqNXF77hdRARc4U167dm0wZsyYjHhW5m0IsLFMCm0EEl0FDQ0NgZCMl2afqjBgTU1N7vg+PCUK4B9yw/Tp0wNZ6NOatxEAO/JxxC03mCWmH8eZMVBVVVVBXV2dO/ebMOCcEFhIwI/5g1j2woUL5tmzZ30dS7SLLBb5DHKxb98+jaVhXDIAKT2IAIgYnnjcto3iF6r934QBr4G+Tpkyxdy+fdt0dXVlK4DiRetEfs7BgQMHtPPE6rAm6XTkBz18+FDJC2GoDYc39ga4mQ9ZL5UMZEG74fYzC7zrzJkzSitlaqnG4MxRGvH8zZs3daBs+5YMWG6iFE+R1bA+HD6bNBCXkcfsioqKNJsBl+1JGwT9J06ciNLnz0TaRP5+8eLFMvohnlfJCVQzihLQMoMF05JnFNsAanf4dxCDoLy8XIOBKGsiyxXLjUyBQEY0FQdTGDFltMdFVAQ+MmiR4wGiONZme7w1kdNayYcsQ0rio8SdaBa2wuhnigOH8lmryGfRF5gZaSDYEvw7qVMQ/4PF+djCc7iBD9ItUTtPNoK5blu5pZtRpDMi6Cci3xfZjBNua2tTc8WZ8e7e5jWK8GhrvVhJng841+aOdY643FPSjEBubrac2cciK8hjQf6vXbumzowcWE99ACyKGzlypMNX6QNmYueTO3r8+HFWCX0KjTz1AtK1WNXx48c19TNhwgS1ykQNLFiCR4ZeAsZBqMe1SbL+2k7bIGUX2iNIIectsbjmu8INLN7yNNEHXKBrlDiFfqrdcJDydZEPXZDinG0is/YcV6EPWA+42JeJuAy390XW49hI2JNjC8cAYEGJvlJzzOvb8mztStPFeOUkS2muH2l1OxOIGsK94kZU+BdLL1W7xM/hBhYvMuv0NdzhvFoWl5q4rY6pC1iWnIULFxI+6vocbpizt8R2+IDb/egkFXaS5Ub4u496HYU64b2GYARml8j3hIKo9rCGOyh84d69id6f2gfWjAsIOgAMGaEwlwisIzaucGe+LL5/hS1RiH4Tk+5n6zGB8+9F3uaAWhZ9O3ToUK+MDqURSFkNd4lDaw976f18YPPeYp00w9DHrcxWFN6GMKxYsUKJzZEjR5LSV8B6DviLROThn3wQtuEMonhrXko6xrYLGaaHb1iwdSUlJapZ4mjMOEqsT0jZ2fmSo+xOBBgNd7icUBQK1tHRob8jJeTFrJlopGX+QYxP4qCqqkqLdlQqoyQAMGeXtbFtV6KMR7fNNmzExZPBSEYTGWm4MLy4trZWHV4iD8854t3t27frjoAkwcRHtp6lmQ46jgnjfKIWw1iXWW3IeuCb5L7WRIBpnwAY+kUBmpRKb86LDhDhXL58WcH3Ng0izPevBBPLly/XKXPw4MGUkgs4XTKunnb/kOweFnWtBGQqCZ8kL+2CibNcE2sJVq5cGQj1i1XeIRlPzcpLxhf1lpemsVNGQzWSYB7byEowIQOtjglCQOSXSmPuwo897X4sIDt6S9PS2B7Uwh4qzBAvnIn4uof593/BBPOVKRKHteE48T04N0sjfxX13kY/W0gBO12TnjFjhl+UI8PyZ3eNcix1pXTeQ5mGSqfMX3fuB6mWS3Wbg5iI1pjSLZeWlpZqldAen3JpXgkmtBZEh+M+G99ATQmx5w7hv1IFDGE+aWwNFw2lA5r6L46LEqyx9WKcU0VFRVoFOwposqKohdhz0KaauFse6o2t4eI1SYTH7RzTg2Q9SXuhdLobAPOLWwQ3tvpPebWxsdE/35zuphaCdt3nQSmTykQ6+zLoJLXgdIvsaNaB9erJWzOxi4f2jnvR/Pnz1cTTmXNxC95OZKnUGnII7LZkYFPdpviueyHOAUeGV01n61GcaYFlUKzHI3vXtvXkpNIB7Mz7ofPemDhOJ50NKalolXcSReEHvGtbowB1EieXgyNjG6JW1mEylDwIFoi9U42OkjXSNLA3oj6Ykle4g/t9R0D8LZXnxU1esWRttXM7lwwJNA6qCL2EpMO44iYIXNaFyMlFeu3t7Zq78ugeBbZz2d4RX2mBa/oFTRPLQs+ggfBlGA/gYV09hYvQR5eScRvF+Zt7iOm92JjMxU9snam3kLXPALvWYHlsoztBmgjtIGiazkMhw6ABC4+GpADa/QuA5bJ+Temn5sv/f4gSo/c5YNfYKd9kGVBdOCmO5hI1pkAC3t1uExKfmwTbFfoL4HACDlN/y5p+RZLfU/Fvs+BgbK1psLBXAjhR+qauh2unTfRdAa8N4D5pqQL+nwADAKGFDQ//Deb9AAAAAElFTkSuQmCC') no-repeat;
-  -webkit-mask-size: 1.7em;
-  background-color: #003370;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0a7aff), color-stop(2%, #004394), color-stop(100%, #00234c));
-  background-image: linear-gradient(#0a7aff, #004394 2%, #00234c);
-  width: 1.7em;
-  height: 1.7em;
+  width: 100%;
+  height: 2.7em;
+  margin-bottom: -1em;
 }
 /* line 106, ../themes/stylesheets/sencha-touch/default/widgets/_list.scss */
 .x-list.x-list-indexed .x-list-disclosure {
-  margin-right: 1.3em;
+  margin-right: none;
 }
 /* line 110, ../themes/stylesheets/sencha-touch/default/widgets/_list.scss */
-.x-list .x-item-selected .x-list-disclosure {
-  background: #fff none;
+.x-list .x-item-pressed .x-list-disclosure {
+  background: none;
 }
 /* line 114, ../themes/stylesheets/sencha-touch/default/widgets/_list.scss */
 .x-list .x-list-item {
   position: relative;
   color: black;
-  padding: 0.5em 0.8em;
-  min-height: 2.6em;
+  padding: 0.4em 0.8em;
+  min-height: 2.3em;
   display: -webkit-box;
   display: box;
   border-top: 1px solid #d1d1d1;
@@ -4120,23 +4122,73 @@ input, textarea {
 /* line 143, ../themes/stylesheets/sencha-touch/default/widgets/_list.scss */
 .x-list .x-list-item.x-item-pressed {
   border-top-color: #77b2f8;
-  background: #77b2f8 none;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #16a4ff), color-stop(100%, #006ad7));
 }
 /* line 151, ../themes/stylesheets/sencha-touch/default/widgets/_list.scss */
-.x-list .x-list-item.x-item-selected {
+.x-list .x-list-item.x-item-pressed {
   background-color: #06346a;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #167bf3), color-stop(2%, #07448c), color-stop(100%, #042348));
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #16a4ff), color-stop(100%, #006ad7));
   background-image: linear-gradient(#167bf3, #07448c 2%, #042348);
   color: white;
   text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
   border-top-color: #084b9b;
   border-bottom-color: #021022;
+  -webkit-tap-highlight-color: background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #16a4ff), color-stop(100%, #006ad7));
 }
 
 /* line 164, ../themes/stylesheets/sencha-touch/default/widgets/_list.scss */
+
+/* Gray Rounded
 .x-list-header {
   background-color: #4d80bc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bccfe6), color-stop(2%, #6792c5), color-stop(100%, #3f6ea6));
+
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #FFFFFF), color-stop(2%, #DDDDDD), color-stop(80%, #AAAAAA));
+  background-image: linear-gradient(#DDDDDD, #DDDDDD 2%, #AAAAAA);
+  color: #222222;
+  text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #888888;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 0.2em 1.02em;
+  margin-bottom: 0.06em;
+  text-shadow: rgba(255, 255, 255, 0.35) 0 0.1em 0;
+  -webkit-box-shadow: 0px 0.1em 0.2em rgba(0, 0, 0, 0.3);
+}*/
+/* Gray Flat
+.x-list-header {
+  background-color: #4d80bc;
+
+  background-image: -webkit-gradient(linear, 0% 0%, 50% 100%, color-stop(0%, #FFFFFF), color-stop(2%, #DDDDDD), color-stop(80%, #AAAAAA));
+  background-image: linear-gradient(#DDDDDD, #DDDDDD 2%, #AAAAAA);
+  color: #222222;
+  text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #888888;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 0.2em 1.02em;
+  margin-bottom: 0.06em;
+  text-shadow: rgba(255, 255, 255, 0.35) 0 0.1em 0;
+  -webkit-box-shadow: 0px 0.1em 0.2em rgba(0, 0, 0, 0.3);
+} 
+/* Gray iOS Rounded*/ 
+.x-list-header {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(164,177,186, 0.9)), color-stop(2%, rgba(145,160,172, 0.9)), color-stop(100%, rgba(181,191,198, 0.95)));
+  color: #FFFFFF;
+  text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
+  border-top: 1px solid #717e86;
+  border-bottom: 1px solid #969ca2;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 0.2em 1.02em;
+  text-shadow: rgba(96, 102, 107, 1) 0 0.1em 0;
+  -webkit-box-shadow: 0px 0.1em 0.3em rgba(0, 0, 0, 0.3);
+}
+/* 
+.x-list-header {
+  background-color: #4d80bc;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(2%, #6792c5), color-stop(100%, #3f6ea6));
   background-image: linear-gradient(#bccfe6, #6792c5 2%, #3f6ea6);
   color: #1f3651;
   text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
@@ -4148,7 +4200,7 @@ input, textarea {
   text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
   -webkit-box-shadow: 0px 0.1em 0.3em rgba(0, 0, 0, 0.3);
 }
-
+/ 
 /* line 179, ../themes/stylesheets/sencha-touch/default/widgets/_list.scss */
 .x-list-header-swap {
   z-index: 1;

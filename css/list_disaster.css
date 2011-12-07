@@ -1,0 +1,14 @@
+.list_disaster_country {
+	font-size: 16px;
+	font-weight: 200;
+}
+.list_disaster_city {
+	font-weight: bold;
+	line-height: 28px;
+}
+.list_disaster_date {
+	color:#999999;
+	font-size: 12px !important;
+	font-weight: 200;
+	line-height: 10px;
+}
