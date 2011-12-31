@@ -1,6 +1,10 @@
 .donationList {
 	width:295px;
 }
+
+/*/////////////////////////////////////////////////////
+//					1st TEMPLATE					 //
+/////////////////////////////////////////////////////*/
 .donationUsername {
 	width:190px;
 	font-weight:bold;
@@ -48,4 +52,71 @@
 	text-align:right;
 	color:#AAAAAA;
 	float:left;
+}
+
+/*/////////////////////////////////////////////////////
+//					2nd TEMPLATE					 //
+/////////////////////////////////////////////////////*/
+.x-list .x-list-item {
+	background:url(../assets/ui_img/listview_bg.png) repeat;
+	border-top: solid 1px #EEEEEE;
+	box-shadow: 0 -1px 0 #888888;
+	-webkit-box-shadow:0 -1px 0 #888888;
+}
+.donationPicture2 {
+	width:41px;
+	height:41px;
+	background:#DDDDDD;
+	margin-top:.2em;
+	margin-bottom:.3em;
+	float:left;
+	border: solid 1px #555555;
+	border-radius:3px;
+	box-shadow: 0 1px 0 #FFFFFF;
+	-webkit-box-shadow: 0 1px 0 #FFFFFF;
+}
+.donationUsername2 {
+	width:243px;
+	font-weight:normal;
+	font-size:13px !important;
+	text-shadow:0 1px 0 #FFFFFF;
+	margin-left:.8em;
+	float:left;
+}
+.donationAmount2 {
+	margin-left:.3em;
+	line-height:17px;
+	text-align:left;
+	float:left;
+}
+.donationComment2 {
+	width:247px;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:normal;
+	color:#333333;
+	text-shadow:none;
+	margin-top:.2em;
+	padding-top:.2em;
+	padding-right:1.5em;
+	float:left;
+}
+.donationTime2 {
+	font-size:11px !important;
+	line-height:17px;
+	font-weight:normal;
+	text-shadow:none;
+	text-align:right;
+	color:#999999;
+	float:right;
+}
+.donationLike {
+	font-size:11px;
+	float:left;
+}
+.donationArrow{
+	width:11px;
+	height:15px;
+	background:url(../assets/ui_img/listview_arrow.png) repeat;
+	float:right;
 }

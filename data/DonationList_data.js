@@ -12,7 +12,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		{ 
 			firstName: "Ashton",
 			lastName: "Kutcher",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/ashton.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/ashton.jpg",
 			location: "Los Angeles, CA, USA",
 			donation:'$250',
 			donationComment:"Let's rebuild joplin",
@@ -22,117 +22,117 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{
 			firstName: "Micheal",
 			lastName: "Arrington",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/arrington.png",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/arrington.png",
 			location: "San Fransisco, CA, USA",
 			donation:'$50',
 			donationComment:'a small donation',
 			donationDate:"May 26th, 2011",
 			time: "1",
-			SMHD: "min"
+			SMHD: "m"
 		},	{ 
 			firstName: "Elaine",
 			lastName: "Guillon",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/elaine.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/elaine.jpg",
 			location: "Nantes, France",
 			donation:'$10',
 			donationComment:'Bon courage Joplin',
 			donationDate:"May 26th, 2011",
 			time: "2",
-			SMHD: "min"
+			SMHD: "m"
 		},	{ 
 			firstName: "MG",
 			lastName: "Sieger",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/mg.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/mg.jpg",
 			location: "San Fransisco, CA, USA",
 			donation:'$5',
 			donationComment:'Hope thing get better soon',
 			donationDate:"May 26th, 2011",
 			time: "4",
-			SMHD: "min"
+			SMHD: "m"
 		},	{ 
 			firstName: "Nick",
 			lastName: "Bilton",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/nick.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/nick.jpg",
 			location: "Chicago, IL, USA",
 			donation:'$10',
 			donationComment:'Love to Joplin. Thank Relief1 for bringing donation to smartphones',
 			donationDate:"May 26th, 2011",
 			time: "6",
-			SMHD: "min"
+			SMHD: "m"
 		},	{ 
 			firstName: "Savino",
 			lastName: "Johner",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/savino.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/savino.jpg",
 			location: "Thun, Switzerland",
 			donation:'$5',
 			donationComment:'Good luck guys.',
 			donationDate:"May 26th, 2011",
 			time: "12",
-			SMHD: "min"
+			SMHD: "m"
 		},	{ 
 			firstName: "Jake",
 			lastName: "Howe",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/jake.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/jake.jpg",
 			location: "Nottingham, UK",
 			donation:'$10',
 			donationComment:"Consitency? Less is more? What's that?",
 			donationDate:"May 26th, 2011",
 			time: "18",
-			SMHD: "min"
+			SMHD: "m"
 		},	{ 
 			firstName: "Jeff",
 			lastName: "Youngblood",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/jeff.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/jeff.jpg",
 			location: "Joplin, MO, USA",
 			donation:'$10',
 			donationComment:'A modest contribution for my city, hope things will get better soon.',
 			donationDate:"May 26th, 2011",
 			time: "23",
-			SMHD: "min"
+			SMHD: "m"
 		},  {	
 			firstName: "CocaCola ®",
 			lastName: "",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/coca.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/coca.jpg",
 			location: "New York, USA",
 			donation:'$2500',
 			donationComment:'Wish Joplin all the best. Hope this donation could help set thing back to normalcy as soon as possible.',
 			donationDate:"May 26th, 2011",
 			time: "35",
-			SMHD: "min"
+			SMHD: "m"
 		},	{ 
 			firstName: "Jann",
 			lastName: "Horn",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/jann.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/jann.jpg",
 			location: "Good luck from germany",
 			donation:'$5',
 			donationComment:'Lorem ipsum dolor sit amet consectetur',
 			donationDate:"May 27th, 2011",
 			time: "41",
-			SMHD: "min"
+			SMHD: "m"
 		}, { 
 			firstName: "Doug",
 			lastName: "Picirillo",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/doug.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/doug.jpg",
 			location: "Chicago, IL, USA",
 			donation:'$25',
 			donationComment:"Contribution to help Joplin where a friend of mine survived.",
 			donationDate:"May 27th, 2011",
 			time: "46",
-			SMHD: "min"
+			SMHD: "m"
 		},	{ 
 			firstName: "Charlie",
 			lastName: "McConnell",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/charles.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/charles.jpg",
 			location: "San Fransisco, CA, USA",
 			donation:'$10',
 			donationComment:"We're with you Joplin",
 			donationDate:"May 27th, 2011",
 			time: "54",
-			SMHD: "min"
+			SMHD: "m"
 		},	{ 
 			firstName: "Jack",
 			lastName: "Dorsey",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/jack.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/jack.jpg",
 			location: "Palo Alto, CA, USA",
 			donation:'$100',
 			donationComment:'small contribution.',
@@ -142,7 +142,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},  { 
 			firstName: "Paul",
 			lastName: "Graham",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/paul.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/paul.jpg",
 			location: "San Fransisco, CA, USA",
 			donation:'$25',
 			donationComment:'Be strong Joplin',
@@ -152,7 +152,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		}, 	{ 
 			firstName: "Carter",
 			lastName: "Leffen",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/carter.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/carter.jpg",
 			location: "Joplin, MO, USA",
 			donation:'$25',
 			donationComment:'Helping rebuild my hometown',
@@ -160,9 +160,9 @@ Relief1.donationsListStore = new Ext.data.Store({
 			time: "2",
 			SMHD: "h"			
 		},	{ 
-			firstName: "",
+			firstName: "Ad",
 			lastName: "Olczak",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/adrien.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/adrien.jpg",
 			location: "Paris, France",
 			donation:'$10',
 			donationComment:"Small way of helping those affected. Good luck from France",
@@ -172,7 +172,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Simon",
 			lastName: "Huang",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/simon.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/simon.jpg",
 			location: "Shanghai, China",
 			donation:'$5',
 			donationComment:'Support from China',
@@ -182,7 +182,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Ghislaine",
 			lastName: "Guerin",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/ghislaine.png",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/ghislaine.png",
 			location: "Poitiers, France",
 			donation:'$5',
 			donationComment:'God bless you Joplin',
@@ -192,7 +192,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},  { 
 			firstName: "Shakeel",
 			lastName: "Shafiq",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/shakeel.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/shakeel.jpg",
 			location: "Islamabad, Pakistan",
 			donation:'$25',
 			donationComment:"I wanted to help so here's my modest donation",
@@ -202,7 +202,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Maciej",
 			lastName: "Malecki",
-			profilPicture:"http://localhost/Relief1_v0.2/assets/profil_img/maciej.jpg",
+			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/maciej.jpg",
 			location: "Poznan, Poland",
 			donation:'$10',
 			donationComment:'hope that could help too',

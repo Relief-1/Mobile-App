@@ -4,29 +4,16 @@ Relief1.views.map = Ext.extend(Ext.Panel, {
 	layout: 'vbox',
 	items: [{
 		xtype: 'map',
-		id: 'mapa',
-		mapOptions : {
-		     		center : new google.maps.LatLng(50.077721, 14.448585),
-		            zoom : 12,
-		            mapTypeId : google.maps.MapTypeId.ROADMAP,
-		            navigationControl: true,
-		            navigationControlOptions: {
-		                style: google.maps.NavigationControlStyle.DEFAULT
-		            }
-		 },
-		 listeners : {
-		            'maprender' : function(comp, map){
-		                Ext.dispatch({
-		                    controller: app.controllers.map,
-		                    action: 'map_rendered',
-		                    map: map
-		                });
-		            }
-		        }
-	}],
-	initComponent: function() {
-		Relief1.views.MapTab.superclass.initComponent.apply(this, arguments);
-	}
+		mapOptions: {
+			center : new google.maps.LatLng(37.381592, -120.135672),
+			zoom: 3,
+			mapTypeId : google.maps.MapTypeId.ROADMAP,
+			navigationControl: true,
+			navigationControlOptions: { 
+				style: google.maps.NavigationControlStyle.DEFAULT 
+			},
+		},
+	}]
 });
 
 /*Relief1.views.map = Ext.extend(Ext.Panel, {

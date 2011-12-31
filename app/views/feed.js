@@ -68,9 +68,9 @@ var detailPanel = new Ext.Panel({
 })
 
 ///////////////////////////////////////////////////////
-//					TEMPLATES						 //
+//					1st TEMPLATE					 //
 ///////////////////////////////////////////////////////
-var DisasterListTemplate = new Ext.XTemplate(
+/*var DisasterListTemplate = new Ext.XTemplate(
 	'<div class="donationList" class="contact">',
 		'<div class="donationPicture"><img src="{profilPicture}" width="39" height="39" border="0"></div>',
 		'<span class="donationUsername">',
@@ -82,7 +82,25 @@ var DisasterListTemplate = new Ext.XTemplate(
 		'<span class="donationAmount">{donation}</span>',
 		'<span class="donationTime">{time}{SMHD}</span>',
 	'</div>'
+); */
+
+///////////////////////////////////////////////////////
+//					1st TEMPLATE					 //
+///////////////////////////////////////////////////////
+var DisasterListTemplate = new Ext.XTemplate(
+	'<div class="donationList" class="contact">',
+		'<div class="donationPicture2"><img src="{profilPicture}" width="39" height="39" border="0"></div>',
+		'<span class="donationUsername2">',
+			'<div style="float:left;"><b>{firstName} {lastName}</b> donated </div>',
+			'<div class="donationAmount2"><b>{donation}</b></div>',
+			'<div class="donationTime2">{time}{SMHD}</div>',
+			'<div class="donationComment2">{donationComment}</div>',
+			'<div class="donationLike"></div>',
+			'<div class="donationArrow"></div>',
+		'</span>',
+	'</div>'
 );
+
 
 var DisasterDetailsTemplate = new Ext.XTemplate(
 );
@@ -94,6 +112,7 @@ var donationList = new Ext.List({
 	id: 'donationList',
 	store: Relief1.donationsListStore,
 	width: 320,
+	scroll:false,
 	itemTpl: DisasterListTemplate,
 	grouped: false,
 	onItemDisclosure: function(record, btn, index) {
