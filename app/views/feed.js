@@ -70,23 +70,6 @@ var detailPanel = new Ext.Panel({
 ///////////////////////////////////////////////////////
 //					1st TEMPLATE					 //
 ///////////////////////////////////////////////////////
-/*var DisasterListTemplate = new Ext.XTemplate(
-	'<div class="donationList" class="contact">',
-		'<div class="donationPicture"><img src="{profilPicture}" width="39" height="39" border="0"></div>',
-		'<span class="donationUsername">',
-		'<span style="float:left">{firstName} {lastName}</span>',
-			'<div style="color:#111111; font-weight:normal; font-size:12px; line-height:19px; margin-left:.3em; float:left;"></div>',
-			'<div class="donationComment">{donationComment}</div>',
-//			'<div class="donationLocation"></div>',
-		'</span>',
-		'<span class="donationAmount">{donation}</span>',
-		'<span class="donationTime">{time}{SMHD}</span>',
-	'</div>'
-); */
-
-///////////////////////////////////////////////////////
-//					1st TEMPLATE					 //
-///////////////////////////////////////////////////////
 var DisasterListTemplate = new Ext.XTemplate(
 	'<div class="donationList" class="contact">',
 		'<div class="donationPicture2"><img src="{profilPicture}" width="39" height="39" border="0"></div>',
@@ -115,10 +98,8 @@ var donationList = new Ext.List({
 	scroll:false,
 	itemTpl: DisasterListTemplate,
 	grouped: false,
-	onItemDisclosure: function(record, btn, index) {
-		detailPanel.update(record.data);
-		Viewport.setActiveItem('detailpanel');
-	}
+	getDetailCard: function(item, parent) {
+    },
 });
 
 var DonationsPanel = new Ext.Panel({
