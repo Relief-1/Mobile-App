@@ -110,6 +110,20 @@ var donationList = new Ext.List({
     },
 });
 
+/*
+getDetailCard: function(item, parent) {
+    var itemData = item.attributes.record.data,
+    parentData = parent.attributes.record.data,
+    detailCard = new Ext.Panel({
+        scroll: 'vertical',
+        styleHtmlContent: true,
+        tpl: ["<h2>{text}</h2>","{info}"]
+    });
+    detailCard.update(itemData);
+    this.backButton.setText(parentData.text);
+    return detailCard;
+},
+*/
 var DonationsPanel = new Ext.Panel({
 	width: 320,
 	layout: 'vbox',

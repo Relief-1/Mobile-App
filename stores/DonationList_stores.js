@@ -1,9 +1,9 @@
-Ext.regModel('Donator', {
+Ext.regModel('Contact', {
     fields: ['firstName', 'lastName', 'donation', 'donationDate']
 });
 
 Relief1.donationsListStore = new Ext.data.Store({
-    model: 'Donator	',
+    model: 'Contact',
     sorters: 'donationDate',
     getGroupString : function(record) {
         return record.get('donationDate');
