@@ -2,7 +2,7 @@
 //			DISASTER BACKGROUND	+ CAPTION			 //
 ///////////////////////////////////////////////////////
 var moneyRaised = new Ext.Panel({
-	style: 'background: url(/Relief1_v0.1/assets/disaster_img/joplin_bg1.jpg);',
+	style: 'background: url(assets/disaster_img/joplin_bg1.jpg);',
 	items:[{
 		xtype: 'panel',
 		html: '<span style="font-size:18px;">$5,750 <span style="font-size:12px; padding-top:12px; float:right;">see more</span></span> <br> <span style="font-size:13px; line-height:13px; color:#999999;">money raised</span>',
@@ -11,7 +11,7 @@ var moneyRaised = new Ext.Panel({
 	}]
 });
 var topDonator = new Ext.Panel({
-	style: 'background: url(/Relief1_v0.1/assets/disaster_img/joplin_bg2.jpg);',
+	style: 'background: url(assets/disaster_img/joplin_bg2.jpg);',
 	items:[{
 		xtype: 'panel',
 		html: '<span style="font-size:18px;">CocaCola ©<span style="font-size:12px; padding-top:12px; float:right;">see more</span></span> <br> <span style="font-size:13px; line-height:13px; color:#999999;">top donator</span>',
@@ -20,7 +20,7 @@ var topDonator = new Ext.Panel({
 	}]
 });
 var topInfluencer = new Ext.Panel({
-	style: 'background: url(/Relief1_v0.1/assets/disaster_img/joplin_bg3.jpg);',
+	style: 'background: url(assets/disaster_img/joplin_bg3.jpg);',
 	items:[{
 		xtype: 'panel',
 		html: '<span style="font-size:18px;">Jack Dorsey<span style="font-size:12px; padding-top:12px; float:right;">see more</span></span> <br> <span style="font-size:13px; line-height:13px; color:#999999;">top influencer</span>',
@@ -53,15 +53,23 @@ var ToggleStoriesDonationButton = new Ext.form.Toggle({
 	xtype: 'togglefield',
 	height: 40,
 	width: 320,
-	value: 1,
+	value: 0,
 	label:"Latest",
 	style: 'background:none',
+	listeners: {
+		change: function(){
+			if (this.value == 0) {
+				console.log('donation')
+			} else (this.value == 1) 
+				console.log('story')
+			
+		}
+	}
 })
 var LatestHeader = new Ext.Panel({
 	height: 40,
 	width: 320,
 	style: 'border-top:1px solid #0a498b; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(2%, #68bdf9), color-stop(3%, #16a4ff), color-stop(98%, #006ad7), color-stop(100%, #0a498b));',
-	html: 'text',
 	items: [ToggleStoriesDonationButton]
 })
 var detailPanel = new Ext.Panel({
@@ -99,6 +107,7 @@ var donationList = new Ext.List({
 	itemTpl: DisasterListTemplate,
 	grouped: false,
 	getDetailCard: function(item, parent) {
+		
     },
 });
 
@@ -112,17 +121,13 @@ var DonationsPanel = new Ext.Panel({
 ///////////////////////////////////////////////////////
 //					STORIES PANEL					 //
 ///////////////////////////////////////////////////////
-/*
 var storyList = new Ext.List({
 	id: 'storyList',
-	store: Relief1.storyListStore,
+	store: Relief1.donationsListStore,
 	width: 320,
+	scroll:false,
 	itemTpl: DisasterListTemplate,
-	grouped: true,
-	onItemDislosure: function(record, btn, index) {
-		detailPanel;.update(record.data);
-		Viewport.setActiveItem('detailpane');
-	}
+	grouped: false,
 });
 
 var StoryPanel = new Ext.Panel({
@@ -131,7 +136,6 @@ var StoryPanel = new Ext.Panel({
 	style: 'background: #DDDDDD',
 	items: [storyList]
 });
-*/
 
 ///////////////////////////////////////////////////////
 //				WHOLE SCREEN CONTAINER				 //
