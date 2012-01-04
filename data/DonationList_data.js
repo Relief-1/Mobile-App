@@ -1,9 +1,9 @@
-Ext.regModel('Contact', {
+Ext.regModel('Donator', {
     fields: ['firstName', 'lastName', 'donation', 'donationDate']
 });
 
 Relief1.donationsListStore = new Ext.data.Store({
-    model: 'Contact',
+    model: 'Donator	',
     sorters: 'donationDate',
     getGroupString : function(record) {
         return record.get('donationDate');
@@ -30,16 +30,16 @@ Relief1.donationsListStore = new Ext.data.Store({
 			time: "1",
 			SMHD: "m"
 		},	{ 
-			firstName: "Elaine",
-			lastName: "Guillon",
-			profilPicture:"assets/profil_img/elaine.jpg",
-			location: "Nantes, France",
-			donation:'$10',
-			donationComment:'Bon courage Joplin',
+			firstName: "Paul",
+			lastName: "Graham",
+			profilPicture:"assets/profil_img/paul.jpg",
+			location: "San Fransisco, CA, USA",
+			donation:'$25',
+			donationComment:'Be strong Joplin',
 			donationDate:"May 26th, 2011",
-			time: "2",
-			SMHD: "m"
-		},	{ 
+			time: "1",
+			SMHD: "h"
+		}, { 
 			firstName: "MG",
 			lastName: "Sieger",
 			profilPicture:"assets/profil_img/mg.jpg",
@@ -140,16 +140,6 @@ Relief1.donationsListStore = new Ext.data.Store({
 			time: "1",
 			SMHD: "h"
 		},  { 
-			firstName: "Paul",
-			lastName: "Graham",
-			profilPicture:"assets/profil_img/paul.jpg",
-			location: "San Fransisco, CA, USA",
-			donation:'$25',
-			donationComment:'Be strong Joplin',
-			donationDate:"May 27th, 2011",
-			time: "1",
-			SMHD: "h"
-		}, 	{ 
 			firstName: "Carter",
 			lastName: "Leffen",
 			profilPicture:"assets/profil_img/carter.jpg",
@@ -166,10 +156,20 @@ Relief1.donationsListStore = new Ext.data.Store({
 			location: "Paris, France",
 			donation:'$10',
 			donationComment:"Small way of helping those affected. Good luck from France",
-			donationDate:"May 28th, 2011",
+			donationDate:"May 26th, 2011",
 			time: "2",
 			SMHD: "h"
 		},	{ 
+			firstName: "Elaine",
+			lastName: "Guillon",
+			profilPicture:"assets/profil_img/elaine.jpg",
+			location: "Nantes, France",
+			donation:'$10',
+			donationComment:'Bon courage Joplin',
+			donationDate:"May 26th, 2011",
+			time: "2",
+			SMHD: "m"
+		}, 	{ 
 			firstName: "Simon",
 			lastName: "Huang",
 			profilPicture:"assets/profil_img/simon.jpg",

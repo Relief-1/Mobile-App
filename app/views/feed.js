@@ -53,15 +53,23 @@ var ToggleStoriesDonationButton = new Ext.form.Toggle({
 	xtype: 'togglefield',
 	height: 40,
 	width: 320,
-	value: 1,
+	value: 0,
 	label:"Latest",
 	style: 'background:none',
+	listeners: {
+		change: function(){
+			if (this.value == 0) {
+				console.log('donation')
+			} else (this.value == 1) 
+				console.log('stories')
+			
+		}
+	}
 })
 var LatestHeader = new Ext.Panel({
 	height: 40,
 	width: 320,
 	style: 'border-top:1px solid #0a498b; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(2%, #68bdf9), color-stop(3%, #16a4ff), color-stop(98%, #006ad7), color-stop(100%, #0a498b));',
-	html: 'text',
 	items: [ToggleStoriesDonationButton]
 })
 var detailPanel = new Ext.Panel({
@@ -99,6 +107,7 @@ var donationList = new Ext.List({
 	itemTpl: DisasterListTemplate,
 	grouped: false,
 	getDetailCard: function(item, parent) {
+		
     },
 });
 
@@ -112,17 +121,13 @@ var DonationsPanel = new Ext.Panel({
 ///////////////////////////////////////////////////////
 //					STORIES PANEL					 //
 ///////////////////////////////////////////////////////
-/*
 var storyList = new Ext.List({
 	id: 'storyList',
-	store: Relief1.storyListStore,
+	store: Relief1.donationsListStore,
 	width: 320,
+	scroll:false,
 	itemTpl: DisasterListTemplate,
-	grouped: true,
-	onItemDislosure: function(record, btn, index) {
-		detailPanel;.update(record.data);
-		Viewport.setActiveItem('detailpane');
-	}
+	grouped: false,
 });
 
 var StoryPanel = new Ext.Panel({
@@ -131,7 +136,6 @@ var StoryPanel = new Ext.Panel({
 	style: 'background: #DDDDDD',
 	items: [storyList]
 });
-*/
 
 ///////////////////////////////////////////////////////
 //				WHOLE SCREEN CONTAINER				 //
