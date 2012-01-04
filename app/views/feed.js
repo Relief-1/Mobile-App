@@ -62,7 +62,6 @@ var ToggleStoriesDonationButton = new Ext.form.Toggle({
 				console.log('donation')
 			} else (this.value == 1) 
 				console.log('stories')
-			
 		}
 	}
 })
