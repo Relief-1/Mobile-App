@@ -1,6 +1,6 @@
 Relief1 = new Ext.Application({
 	name: 'Relief1',
-	icon: 'app_icon9.png',
+	icon: 'http://adrienolczak.eu/Relief1_v0.1/app_icon.png',
 	glossOnIcon: false,	
 	tabletStartupScreen: '',
 	phoneStartupScreen: '',
