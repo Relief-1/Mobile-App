@@ -2,7 +2,7 @@
 //			DISASTER BACKGROUND	+ CAPTION			 //
 ///////////////////////////////////////////////////////
 var moneyRaised = new Ext.Panel({
-	style: 'background: url(/Relief1_v0.1/assets/disaster_img/joplin_bg1.jpg);',
+	style: 'background: url(assets/disaster_img/joplin_bg1.jpg);',
 	items:[{
 		xtype: 'panel',
 		html: '<span style="font-size:18px;">$5,750 <span style="font-size:12px; padding-top:12px; float:right;">see more</span></span> <br> <span style="font-size:13px; line-height:13px; color:#999999;">money raised</span>',
@@ -11,7 +11,7 @@ var moneyRaised = new Ext.Panel({
 	}]
 });
 var topDonator = new Ext.Panel({
-	style: 'background: url(/Relief1_v0.1/assets/disaster_img/joplin_bg2.jpg);',
+	style: 'background: url(assets/disaster_img/joplin_bg2.jpg);',
 	items:[{
 		xtype: 'panel',
 		html: '<span style="font-size:18px;">CocaCola ©<span style="font-size:12px; padding-top:12px; float:right;">see more</span></span> <br> <span style="font-size:13px; line-height:13px; color:#999999;">top donator</span>',
@@ -20,7 +20,7 @@ var topDonator = new Ext.Panel({
 	}]
 });
 var topInfluencer = new Ext.Panel({
-	style: 'background: url(/Relief1_v0.1/assets/disaster_img/joplin_bg3.jpg);',
+	style: 'background: url(assets/disaster_img/joplin_bg3.jpg);',
 	items:[{
 		xtype: 'panel',
 		html: '<span style="font-size:18px;">Jack Dorsey<span style="font-size:12px; padding-top:12px; float:right;">see more</span></span> <br> <span style="font-size:13px; line-height:13px; color:#999999;">top influencer</span>',

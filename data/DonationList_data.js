@@ -12,7 +12,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		{ 
 			firstName: "Ashton",
 			lastName: "Kutcher",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/ashton.jpg",
+			profilPicture:"assets/profil_img/ashton.jpg",
 			location: "Los Angeles, CA, USA",
 			donation:'$250',
 			donationComment:"Let's rebuild joplin",
@@ -22,7 +22,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{
 			firstName: "Micheal",
 			lastName: "Arrington",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/arrington.png",
+			profilPicture:"assets/profil_img/arrington.png",
 			location: "San Fransisco, CA, USA",
 			donation:'$50',
 			donationComment:'a small donation',
@@ -32,7 +32,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Elaine",
 			lastName: "Guillon",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/elaine.jpg",
+			profilPicture:"assets/profil_img/elaine.jpg",
 			location: "Nantes, France",
 			donation:'$10',
 			donationComment:'Bon courage Joplin',
@@ -42,7 +42,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "MG",
 			lastName: "Sieger",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/mg.jpg",
+			profilPicture:"assets/profil_img/mg.jpg",
 			location: "San Fransisco, CA, USA",
 			donation:'$5',
 			donationComment:'Hope thing get better soon',
@@ -52,7 +52,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Nick",
 			lastName: "Bilton",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/nick.jpg",
+			profilPicture:"assets/profil_img/nick.jpg",
 			location: "Chicago, IL, USA",
 			donation:'$10',
 			donationComment:'Love to Joplin. Thank Relief1 for bringing donation to smartphones',
@@ -62,7 +62,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Savino",
 			lastName: "Johner",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/savino.jpg",
+			profilPicture:"assets/profil_img/savino.jpg",
 			location: "Thun, Switzerland",
 			donation:'$5',
 			donationComment:'Good luck guys.',
@@ -72,7 +72,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Jake",
 			lastName: "Howe",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/jake.jpg",
+			profilPicture:"assets/profil_img/jake.jpg",
 			location: "Nottingham, UK",
 			donation:'$10',
 			donationComment:"Consitency? Less is more? What's that?",
@@ -82,7 +82,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Jeff",
 			lastName: "Youngblood",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/jeff.jpg",
+			profilPicture:"assets/profil_img/jeff.jpg",
 			location: "Joplin, MO, USA",
 			donation:'$10',
 			donationComment:'A modest contribution for my city, hope things will get better soon.',
@@ -92,7 +92,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},  {	
 			firstName: "CocaCola ®",
 			lastName: "",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/coca.jpg",
+			profilPicture:"assets/profil_img/coca.jpg",
 			location: "New York, USA",
 			donation:'$2500',
 			donationComment:'Wish Joplin all the best. Hope this donation could help set thing back to normalcy as soon as possible.',
@@ -102,7 +102,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Jann",
 			lastName: "Horn",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/jann.jpg",
+			profilPicture:"assets/profil_img/jann.jpg",
 			location: "Good luck from germany",
 			donation:'$5',
 			donationComment:'Lorem ipsum dolor sit amet consectetur',
@@ -112,7 +112,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		}, { 
 			firstName: "Doug",
 			lastName: "Picirillo",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/doug.jpg",
+			profilPicture:"assets/profil_img/doug.jpg",
 			location: "Chicago, IL, USA",
 			donation:'$25',
 			donationComment:"Contribution to help Joplin where a friend of mine survived.",
@@ -122,7 +122,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Charlie",
 			lastName: "McConnell",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/charles.jpg",
+			profilPicture:"assets/profil_img/charles.jpg",
 			location: "San Fransisco, CA, USA",
 			donation:'$10',
 			donationComment:"We're with you Joplin",
@@ -132,7 +132,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Jack",
 			lastName: "Dorsey",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/jack.jpg",
+			profilPicture:"assets/profil_img/jack.jpg",
 			location: "Palo Alto, CA, USA",
 			donation:'$100',
 			donationComment:'small contribution.',
@@ -142,7 +142,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},  { 
 			firstName: "Paul",
 			lastName: "Graham",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/paul.jpg",
+			profilPicture:"assets/profil_img/paul.jpg",
 			location: "San Fransisco, CA, USA",
 			donation:'$25',
 			donationComment:'Be strong Joplin',
@@ -152,7 +152,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		}, 	{ 
 			firstName: "Carter",
 			lastName: "Leffen",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/carter.jpg",
+			profilPicture:"assets/profil_img/carter.jpg",
 			location: "Joplin, MO, USA",
 			donation:'$25',
 			donationComment:'Helping rebuild my hometown',
@@ -162,7 +162,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Ad",
 			lastName: "Olczak",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/adrien.jpg",
+			profilPicture:"assets/profil_img/adrien.jpg",
 			location: "Paris, France",
 			donation:'$10',
 			donationComment:"Small way of helping those affected. Good luck from France",
@@ -172,7 +172,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Simon",
 			lastName: "Huang",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/simon.jpg",
+			profilPicture:"assets/profil_img/simon.jpg",
 			location: "Shanghai, China",
 			donation:'$5',
 			donationComment:'Support from China',
@@ -182,7 +182,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Ghislaine",
 			lastName: "Guerin",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/ghislaine.png",
+			profilPicture:"assets/profil_img/ghislaine.png",
 			location: "Poitiers, France",
 			donation:'$5',
 			donationComment:'God bless you Joplin',
@@ -192,7 +192,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},  { 
 			firstName: "Shakeel",
 			lastName: "Shafiq",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/shakeel.jpg",
+			profilPicture:"assets/profil_img/shakeel.jpg",
 			location: "Islamabad, Pakistan",
 			donation:'$25',
 			donationComment:"I wanted to help so here's my modest donation",
@@ -202,7 +202,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Maciej",
 			lastName: "Malecki",
-			profilPicture:"http://adrienolczak.eu/Relief1_v0.1/assets/profil_img/maciej.jpg",
+			profilPicture:"assets/profil_img/maciej.jpg",
 			location: "Poznan, Poland",
 			donation:'$10',
 			donationComment:'hope that could help too',
