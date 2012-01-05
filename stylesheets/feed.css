@@ -64,8 +64,8 @@
 	-webkit-box-shadow:0 -1px 0 #888888;
 }
 .donationPicture2 {
-	width:41px;
-	height:41px;
+	width:43px;
+	height:43px;
 	background:#DDDDDD;
 	margin-top:.2em;
 	margin-bottom:.3em;
@@ -76,7 +76,8 @@
 	-webkit-box-shadow: 0 1px 0 #FFFFFF;
 }
 .donationUsername2 {
-	width:243px;
+	width:240px;
+	height: auto;
 	font-weight:normal;
 	font-size:13px !important;
 	text-shadow:0 1px 0 #FFFFFF;
@@ -115,6 +116,8 @@
 	float:left;
 }
 .donationArrow{
+	position:relative;
+	top: -.8em;
 	width:11px;
 	height:15px;
 	background:url(../assets/ui_img/listview_arrow.png) repeat;

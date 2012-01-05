@@ -12,7 +12,6 @@ Relief1.views.Viewport = Ext.extend(Ext.TabPanel, {
 		{ xtype: 'Profile' }
 	],
 	dockedItems: [{
-		xtype: 'toolbar',
 		title: 'Relief1'
 	}]
 });
