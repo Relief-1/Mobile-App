@@ -83,9 +83,9 @@ var DonationListTemplate = new Ext.XTemplate(
 		'<span class="donationUsername2">',
 			'<div style="float:left;"><b>{firstName} {lastName}</b> donated </div>',
 			'<div class="donationAmount2"><b>{donation}</b></div>',
+			'<div class="donationArrow"></div>',
 			'<div class="donationTime2">{time}{SMHD}</div>',
 			'<div class="donationComment2">{donationComment}</div>',
-			'<div class="donationArrow"></div>',
 		'</span>',
 	'</div>'
 );
@@ -119,7 +119,7 @@ var donationDetailsToolbar = new Ext.Toolbar({
 
 // Donation Detail
 var donationdetailPanel = new Ext.Panel({
-	width: 320,
+	height: 320,
 	layout: 'fit',
 	style: 'background:#DDDDDD',
 	id: 'detailpanel',
@@ -130,9 +130,10 @@ var donationdetailPanel = new Ext.Panel({
 var donationList = new Ext.List({
 	id: 'donationList',
 	store: Relief1.donationsListStore,
-	width: 320,
+	width: '100%',
 	itemTpl: DonationListTemplate,
 	grouped: false,
+	scroll: false,
 	onItemDisclosure: function(record) {													// Once a donation is tapped
 		var donationDetailsTitle = '<div style="font-size:.5em;">' + record.data.firstName + " " + record.data.lastName + "'s donation </div> " ; // title var
         donationDetailsToolbar.setTitle(donationDetailsTitle);								// Changed the toolbar title
@@ -141,9 +142,6 @@ var donationList = new Ext.List({
 		LatestHeader.hide();																// Hide the toggle bar
 		DisasterPanel.hide(); 																// Hide the image top part
     },
-	plugins: [{
-	        ptype: 'pullrefresh'
-	    }],
 });
 
 // Donation List Wrapper
@@ -155,31 +153,17 @@ var donationListWrapper = new Ext.Panel({
 
 // Donation Panel
 var DonationsPanel = new Ext.Panel({
-	width: 320,
-	height: 480,
     layout: 'card',
+	width: 320,
+	height: '211%',
+	fullscreen: false,
 	items: [donationListWrapper,donationdetailPanel],
 });
 
 ///////////////////////////////////////////////////////
 //					STORIES PANEL					 //
 ///////////////////////////////////////////////////////
-/*var storyList = new Ext.List({
-	id: 'storyList',
-	store: Relief1.donationsListStore,
-	width: 320,
-	scroll:false,
-	itemTpl: DisasterListTemplate,
-	grouped: false,
-});
 
-var StoryPanel = new Ext.Panel({
-	width: 320,
-	layout: 'vbox',
-	style: 'background: #DDDDDD',
-	items: [storyList]
-});
-*/
 ///////////////////////////////////////////////////////
 //				WHOLE SCREEN CONTAINER				 //
 ///////////////////////////////////////////////////////
@@ -191,7 +175,7 @@ Relief1.views.feed = Ext.extend(Ext.Panel, {
 	iconCls: 'feed',
 	style: 'background:#555555',
 	items: [DisasterPanel,LatestHeader,DonationsPanel],
-	dockedItems: [donationDetailsToolbar]
+	dockedItems: [donationDetailsToolbar],
 });
 
 Ext.reg('Feed', Relief1.views.feed);

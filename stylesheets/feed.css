@@ -91,7 +91,7 @@
 	float:left;
 }
 .donationComment2 {
-	width:247px;
+	width:240px;
 	font-family:Arial;
 	font-size:12px;
 	font-weight:normal;
@@ -103,8 +103,9 @@
 	float:left;
 }
 .donationTime2 {
+	position:relative;
+	left: 1em;
 	font-size:11px !important;
-	line-height:17px;
 	font-weight:normal;
 	text-shadow:none;
 	text-align:right;
@@ -117,7 +118,8 @@
 }
 .donationArrow{
 	position:relative;
-	top: -.8em;
+	top: 1.6em;
+	left: .3em;
 	width:11px;
 	height:15px;
 	background:url(../assets/ui_img/listview_arrow.png) repeat;
