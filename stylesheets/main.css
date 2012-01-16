@@ -21,17 +21,17 @@
 	border: 0;
 }
 .x-field-toggle .x-slider.x-toggle-on {
-	background:url(../assets/ui_img/toggle_bg_sprite.png) 0px -27px no-repeat;
+	background:url(../assets/feed_ui/toggle_bg_sprite.png) 0px -27px no-repeat;
 }
 .x-field-toggle .x-slider.x-toggle-off {
-	background:url(../assets/ui_img/toggle_bg_sprite.png) 0px -1px no-repeat;
+	background:url(../assets/feed_ui/toggle_bg_sprite.png) 0px -1px no-repeat;
 }
 .x-field-toggle .x-thumb::before{
     -webkit-box-shadow:none;
     border:none;
 	margin-top: -4px;
 	padding-right: 4.5em;
-	background: url(../assets/ui_img/toggle_thumb.png) 0px 2px no-repeat;
+	background: url(../assets/feed_ui/toggle_thumb.png) 0px 2px no-repeat;
 }
 .x-form-label {
 	background:none;

@@ -3,7 +3,7 @@
 }
 
 /*/////////////////////////////////////////////////////
-//					1st TEMPLATE					 //
+//					1st TEMPLATE                     //
 /////////////////////////////////////////////////////*/
 .donationUsername {
 	width:190px;
@@ -14,6 +14,7 @@
 	float:left;
 }
 .donationPicture {
+	position:relative;
 	width:37px;
 	height:37px;
 	background:#DDDDDD;
@@ -21,6 +22,7 @@
 	margin-bottom:.1em;
 	float:left;
 	-webkit-border-radius:5px;
+	z-index:998;
 }
 .donationAmount {
 	width:55px;
@@ -58,7 +60,7 @@
 //					2nd TEMPLATE					 //
 /////////////////////////////////////////////////////*/
 .x-list .x-list-item {
-	background:url(../assets/ui_img/listview_bg.png) repeat;
+	background:url(../assets/feed_ui/listview_bg.png) repeat;
 	border-top: solid 1px #EEEEEE;
 	box-shadow: 0 -1px 0 #888888;
 	-webkit-box-shadow:0 -1px 0 #888888;
@@ -117,6 +119,6 @@
 .donationArrow{
 	width:11px;
 	height:15px;
-	background:url(../assets/ui_img/listview_arrow.png) repeat;
+	background:url(../assets/feed_ui/listview_arrow.png) repeat;
 	float:right;
 }

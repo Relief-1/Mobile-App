@@ -6,7 +6,7 @@
 // Also, even thought we are only actually using the {city}, the {country} and the {Types} fields in the app currently
 // we may find use for these other fields in the future and of course, we can always add more.
 
-	Ext.regModel('Donator', {
+	Ext.regModel('ProfilDonation', {
 	    fields: [
 			{ name: 'firstName', type: "string", mapping: "firstName.donator"},
 			{ name: 'lastName', type: "string", mapping: "lastName.donator" },
