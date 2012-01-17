@@ -105,7 +105,7 @@ var profileActivityToolbar = new Ext.Toolbar({
             handler: function() {
 				var joplin = '<div style="font-size:.7em;">Adrien Olczak</div>';
 				profileActivityToolbar.setTitle(joplin);
-            	profileActivityPanel.setActiveItem('listwrapper',{type: 'slide', direction: 'right'});
+            	profileActivityPanel.setActiveItem('wrapper',{type: 'slide', direction: 'right'});
 				profileTopPart.show();
 				profileLevelHeader.show();
 				profileLevelContainer.show();
@@ -119,7 +119,7 @@ var profileActivityDetailsPanel = new Ext.Panel({
 	height: 320,
 	layout: 'fit',
 	style: 'background:#DDDDDD',
-	id: 'detailpanel',
+	id: 'details',
 	tpl: profileActivityDetails,
 });
 
@@ -135,7 +135,7 @@ var profileActivityList = new Ext.List({
 		var activityDetailsTitle = '<div style="font-size:.7em;">' + record.data.firstName + " " + record.data.lastName + " </div> " ; // title var
 	    profileActivityToolbar.setTitle(activityDetailsTitle);								// Changed the toolbar title
 		profileActivityDetailsPanel.update(record.data);											// Update the detail panel
-		profileActivityPanel.setActiveItem('detailpanel',{type: 'slide', direction: 'left'});		// Set this tapped item
+		profileActivityPanel.setActiveItem('details',{type: 'slide', direction: 'left'});		// Set this tapped item
 		profileTopPart.hide();
 		profileLevelHeader.hide();
 		profileLevelContainer.hide();
@@ -144,7 +144,7 @@ var profileActivityList = new Ext.List({
 });
 // Donation List Wrapper
 var profileActivityWrapper = new Ext.Panel({
-	id: 'listwrapper',
+	id: 'wrapper',
 	layout: 'fit',
 	items: [profileActivityList],
 });

@@ -32,12 +32,28 @@ var DisasterNamePanel = new Ext.Panel({
 	height: 67,
 	width: 320,
 	html: 'Joplin, MO, USA <br/> Tornado',
-	style: 'position:relative; bottom:205px; padding: .6em .5em; background: rgba(10,10,10, .8); color:white; font-size:18px; font-weight:bold;'
+	style: 'position:relative; bottom:205px; padding: .7em .7em; background: rgba(10,10,10, .8); color:white; font-size:17px; font-weight:bold;',
+	items:[{
+		xtype: 'button',
+		width: 100,
+		height: 36,
+		text: 'donate',
+		cls: 'donate_btn',
+		handler: function() {
+			var chooseOrg = '<div style="font-size:.7em;">Donation</div>';
+			donationDetailsToolbar.setTitle(chooseOrg);
+			DonationsPanel.setActiveItem('payementProcess',{type:'slide', direction:'left'});
+			LatestHeader.hide();
+			DisasterPanel.hide();			
+		}
+	}]
 })
+
 var DisasterImagePanel = new Ext.Carousel({
 	height: 245,
 	width: 320,
-	items: [moneyRaised, topDonator, topInfluencer]
+	items: [moneyRaised, topDonator, topInfluencer],
+	style: 'background:black;'
 });
 
 var DisasterPanel = new Ext.Panel({
@@ -71,21 +87,19 @@ var LatestHeader = new Ext.Panel({
 	style: 'border-top:1px solid #0a498b; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(2%, #68bdf9), color-stop(3%, #16a4ff), color-stop(98%, #006ad7), color-stop(100%, #0a498b));',
 	items: [ToggleStoriesDonationButton]
 })
-var detailPanel = new Ext.Panel({
-})
 
 ///////////////////////////////////////////////////////
 //					1st TEMPLATE					 //
 ///////////////////////////////////////////////////////
 var DonationListTemplate = new Ext.XTemplate(
 	'<div class="donationList" class="contact">',
-		'<div class="donationPicture2"><img src="{profilPicture}" width="41" height="41" border="0"></div>',
+		'<div class="donationPicture2"><img src="{profilPicture}" width="39" height="39" border="0"></div>',
 		'<span class="donationUsername2">',
 			'<div style="float:left;"><b>{firstName} {lastName}</b> donated </div>',
 			'<div class="donationAmount2"><b>{donation}</b></div>',
-			'<div class="donationArrow"></div>',
 			'<div class="donationTime2">{time}{SMHD}</div>',
 			'<div class="donationComment2">{donationComment}</div>',
+			'<div class="donationArrow"></div>',
 		'</span>',
 	'</div>'
 );
@@ -95,6 +109,34 @@ var DisasterDetailsTemplate = new Ext.XTemplate(
 	'{firstName} {lastName} donated {donation}. {time}{SMHD} ago'
 );
 
+///////////////////////////////////////////////////////
+//				PAYEMENT PROCESS PANEL				 //
+///////////////////////////////////////////////////////
+var payementProcess = new Ext.Panel({
+	id: 'payementProcess',
+	height: 480,
+	width: 320,
+	scroll: false,
+	cls: 'payementProcess_bg',
+	items: [{ 
+		xtype: 'panel',
+		width: 270,
+		height: 260,
+		cls: 'payementProcessContainer',
+		items: [
+			{ xtype: 'button', text:'RedCross', width: 237, height: 30, cls: 'payementChooseOrg_btn'},
+			{ xtype: 'button', text:'Salvation Army', width: 237, height: 30, cls: 'payementChooseOrg_btn'},
+			{ xtype: 'button', text:'United Way', width: 237, height: 30, cls: 'payementChooseOrg_btn'},
+			{	xtype: 'button',
+			  	text:'Next',
+			  	width: 81,
+			  	height: 30,
+				cls: 'payement_next_btn',
+				
+			}
+		]
+	}]
+});
 
 ///////////////////////////////////////////////////////
 //					DONATION PANEL					 //
@@ -111,8 +153,8 @@ var donationDetailsToolbar = new Ext.Toolbar({
 				var joplin = '<div style="font-size:.7em;">Joplin Tornado - USA</div>';
 				donationDetailsToolbar.setTitle(joplin);
             	DonationsPanel.setActiveItem('listwrapper',{type: 'slide', direction: 'right'});
-				DisasterPanel.show();
-				LatestHeader.show();
+				DisasterPanel.show({type: 'fade', direction: 'right'});
+				LatestHeader.show({type: 'slide', direction: 'right'});
             }
     }],
 });
@@ -138,9 +180,9 @@ var donationList = new Ext.List({
 		var donationDetailsTitle = '<div style="font-size:.5em;">' + record.data.firstName + " " + record.data.lastName + "'s donation </div> " ; // title var
         donationDetailsToolbar.setTitle(donationDetailsTitle);								// Changed the toolbar title
 		donationdetailPanel.update(record.data);											// Update the detail panel
-		DonationsPanel.setActiveItem('detailpanel',{type: 'slide', direction: 'left'});		// Set this tapped item
+		DonationsPanel.setActiveItem('donationList',{type: 'slide', direction: 'left'});		// Set this tapped item
 		LatestHeader.hide();																// Hide the toggle bar
-		DisasterPanel.hide(); 																// Hide the image top part
+		DisasterPanel.hide();
     },
 });
 
@@ -148,16 +190,16 @@ var donationList = new Ext.List({
 var donationListWrapper = new Ext.Panel({
 	id: 'listwrapper',
 	layout: 'fit',
-	items: [donationList],
+	items: [donationList]
 });
 
 // Donation Panel
 var DonationsPanel = new Ext.Panel({
     layout: 'card',
 	width: 320,
-	height: '192%',
+	height: 1290,	
 	fullscreen: false,
-	items: [donationListWrapper,donationdetailPanel],
+	items: [donationListWrapper,donationdetailPanel,payementProcess],
 });
 
 ///////////////////////////////////////////////////////
@@ -169,7 +211,7 @@ Relief1.views.feed = Ext.extend(Ext.Panel, {
 	layout: 'vbox',
 	title: 'Feed',
 	iconCls: 'feed',
-	style: 'background:#555555',
+	style: 'background:#222222',
 	items: [DisasterPanel,LatestHeader,DonationsPanel],
 	dockedItems: [donationDetailsToolbar],
 });
