@@ -42,7 +42,7 @@ var DisasterNamePanel = new Ext.Panel({
 		handler: function() {
 			var chooseOrg = '<div style="font-size:.7em;">Donation</div>';
 			donationDetailsToolbar.setTitle(chooseOrg);
-			DonationsPanel.setActiveItem('payementProcess',{type:'slide', direction:'left'});
+			DonationsPanel.setActiveItem('payementProcessOrg',{type:'slide', direction:'left'});
 			LatestHeader.hide();
 			DisasterPanel.hide();			
 		}
@@ -112,31 +112,124 @@ var DisasterDetailsTemplate = new Ext.XTemplate(
 ///////////////////////////////////////////////////////
 //				PAYEMENT PROCESS PANEL				 //
 ///////////////////////////////////////////////////////
-var payementProcess = new Ext.Panel({
-	id: 'payementProcess',
+var payementProcessOrg = new Ext.Panel({
+	id: 'payementProcessOrg',
 	height: 480,
 	width: 320,
 	scroll: false,
 	cls: 'payementProcess_bg',
 	items: [{ 
-		xtype: 'panel',
+		xtype: 'panel', // Choose Organization Container
 		width: 270,
 		height: 260,
-		cls: 'payementProcessContainer',
-		items: [
-			{ xtype: 'button', text:'RedCross', width: 237, height: 30, cls: 'payementChooseOrg_btn'},
-			{ xtype: 'button', text:'Salvation Army', width: 237, height: 30, cls: 'payementChooseOrg_btn'},
-			{ xtype: 'button', text:'United Way', width: 237, height: 30, cls: 'payementChooseOrg_btn'},
-			{	xtype: 'button',
+		cls: 'payementProcessOrgContainer', 
+		items: [{
+				xtype: 'button',
+				text:'RedCross', 
+				width: 237, 
+				height: 30, 
+				cls: 'payementChooseOrg_btn'
+			},	{ 
+				xtype: 'button',
+				text:'Salvation Army',
+				width: 237,
+				height: 30,
+				cls: 'payementChooseOrg_btn'
+			},	{ 
+				xtype: 'button',
+				text:'United Way',
+				width: 237,
+				height: 30,
+				cls: 'payementChooseOrg_btn'
+			},	{
+				xtype: 'button',
 			  	text:'Next',
 			  	width: 81,
 			  	height: 30,
-				cls: 'payement_next_btn',
-				
+				cls: 'org_next_btn',
+				handler: function() {
+					DonationsPanel.setActiveItem('payementProcessMoney',{type:'slide', direction:'left'});
+				}
 			}
 		]
 	}]
 });
+var payementProcessMoneyToolbar = new Ext.Toolbar({
+	xtype: 'toolbar',
+	ui: 'dark',
+	title: 'shit',
+	hidden: true,
+    items: [{
+    		text: 'back',
+			ui: 'back',
+			style: 'border: solid 1px #222222;',
+        	handler: function() {
+           		DonationsPanel.setActiveItem('payementProcessOrg',{type: 'slide', direction: 'right'});
+				donationDetailsToolbar.show();
+        }
+	}]
+});
+var payementProcessMoney = new Ext.Panel({
+	id: 'payementProcessMoney',
+	height: 480,
+	width: 320,
+	scroll: false,
+	cls: 'payementProcess_bg',
+	items: [{
+			xtype: 'panel', // Choose Amount + msg Container
+			width: 270,
+			height: 260,
+			cls: 'payementProcessMoneyContainer', 
+			items: [
+			{
+				xtype: 'button',
+				value: 5,
+				text: '$5',
+				width: 30,
+				height: 30,
+				cls: 'five_bucks_btn',
+			},	{
+				xtype: 'button',
+				value: 10,
+				text: '$10',
+				width: 40,
+				height: 30,
+				cls: 'ten_bucks_btn',
+			},	{
+				xtype: 'button',
+				value: 25,
+				text: '$25',
+				width: 40,
+				height: 30,
+				cls: 'ten_bucks_btn',
+			},	{
+				xtype: 'numberfield',
+				width: 50,
+				height: 30,
+				cls: 'other_bucks_fields',
+				focusCls: 'other_bucks_fields_focus',
+				minValue:25,
+				hideTrigger: true,
+				keyNavEnabled: false,
+				mouseWheelEnabled: false
+			},	{
+				xtype: 'textareafield',
+				width: 226,
+				height: 45,
+				cls: 'donation_add_comment',
+				focusCls: 'donation_add_comment_focus'
+			},	{
+				xtype: 'button',
+			  	text:'Donate',
+			  	width: 81,
+			  	height: 30,
+				cls: 'payement_amount_btn',
+			}]
+	}]
+});
+
+
+
 
 ///////////////////////////////////////////////////////
 //					DONATION PANEL					 //
@@ -197,9 +290,9 @@ var donationListWrapper = new Ext.Panel({
 var DonationsPanel = new Ext.Panel({
     layout: 'card',
 	width: 320,
-	height: 1290,	
+	height: 1380,	
 	fullscreen: false,
-	items: [donationListWrapper,donationdetailPanel,payementProcess],
+	items: [donationListWrapper,donationdetailPanel,payementProcessOrg,payementProcessMoney],
 });
 
 ///////////////////////////////////////////////////////
@@ -213,7 +306,7 @@ Relief1.views.feed = Ext.extend(Ext.Panel, {
 	iconCls: 'feed',
 	style: 'background:#222222',
 	items: [DisasterPanel,LatestHeader,DonationsPanel],
-	dockedItems: [donationDetailsToolbar],
+	dockedItems: [donationDetailsToolbar,payementProcessMoneyToolbar],
 });
 
 Ext.reg('Feed', Relief1.views.feed);

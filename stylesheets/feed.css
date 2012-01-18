@@ -2,6 +2,7 @@
 	width:295px;
 }
 
+
 .donate_btn {
 	margin-top: 5px;
 	background: url(../assets/disaster_img/donate_btn.png);
@@ -18,10 +19,14 @@
 	background: url(../assets/disaster_img/donate_btn.png);
 	border:0;
 }
+
+/*/////////////////////////////////////////////////////
+//		     PAYEMENT PROCESS ORGANIZATIONS          //
+/////////////////////////////////////////////////////*/
 .payementProcess_bg{
 	background: url(../assets/payement_ui/payement_bg.jpg);
 }
-.payementProcessContainer {
+.payementProcessOrgContainer {
 	margin: 0 auto;
 	margin-top: 50px;
 	padding-top: 75px;
@@ -55,7 +60,7 @@
 	-webkit-box-shadow: inset 0 1px 0 #1ccdff, 0 1px 0 #FFFFFF;
 	-webkit-border-radius: 3px;
 }
-.payement_next_btn {
+.org_next_btn {
 	margin-top: 15px;
 	margin-right: 17px;
 	background-image: url(../assets/payement_ui/next_btn.png);
@@ -68,13 +73,136 @@
 	-webkit-border-radius: 3px;
 	float:right;
 }
-.payement_next_btn span {
+.org_next_btn span {
 	text-align:left;
 }
-.payement_next_btn:active {
+.org_next_btn:active {
 	background-image: url(../assets/payement_ui/next_btn.png);
 	border:none;
 }
+
+/*/////////////////////////////////////////////////////
+//				PAYEMENT PROCESS MONEY               //
+/////////////////////////////////////////////////////*/
+.payementProcessMoneyContainer {
+	margin: 0 auto;
+	margin-top: 50px;
+	padding-top: 75px;
+	background: url(../assets/payement_ui/choose_amount_bg.png);
+}
+.five_bucks_btn {
+	margin-left:27px;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(1%, #FFFFFF), color-stop(100%, #d8d8d8));
+	
+	font-size:.8em !important;
+	padding: 0 0;
+	color:#888888;
+	padding-left:0px;
+	text-shadow:0 1px 0 #FFFFFF;
+	
+	border:1px solid #777777;
+	-webkit-box-shadow: inset 0 1px 0 #FFFFFF, 0 1px 0 #FFFFFF;
+	-webkit-border-radius: 3px !important;
+	float:left;
+}
+.five_bucks_btn:active{
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #15a2fd), color-stop(50%, #0a84e8), color-stop(100%, #016dd9));
+	
+	color:white;
+	text-shadow:0 -1px 0 #005399;
+	
+	border:1px solid #005399;
+	-webkit-box-shadow: inset 0 1px 0 #1ccdff, 0 1px 0 #FFFFFF;
+	-webkit-border-radius: 3px;
+}
+.ten_bucks_btn {
+	margin-left:10px;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(1%, #FFFFFF), color-stop(100%, #d8d8d8));
+	
+	font-size:.8em !important;
+	padding: 0 0;
+	color:#888888;
+	padding-left:0px;
+	text-shadow:0 1px 0 #FFFFFF;
+	
+	border:1px solid #777777;
+	-webkit-box-shadow: inset 0 1px 0 #FFFFFF, 0 1px 0 #FFFFFF;
+	-webkit-border-radius: 3px !important;
+	float:left;
+}
+.ten_bucks_btn:active{
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #15a2fd), color-stop(50%, #0a84e8), color-stop(100%, #016dd9));
+	
+	color:white;
+	text-shadow:0 -1px 0 #005399;
+	
+	border:1px solid #005399;
+	-webkit-box-shadow: inset 0 1px 0 #1ccdff, 0 1px 0 #FFFFFF;
+	-webkit-border-radius: 3px;
+}
+.other_bucks_fields {
+	margin-left: 40px;
+	
+	font-size:.8em !important;
+	font-weight:bold;
+	
+	border:1px solid #777777;
+	-webkit-box-shadow:0 2px 2px -1px rgba(0, 0, 0, 0.2) inset, 0 1px rgba(255, 255, 255, 0.3);
+	-webkit-border-radius: 3px !important;
+	float:left;
+}
+.other_bucks_fields_focus{
+	border-color: rgba(104, 189, 244, 0.9);
+	box-shadow: 0 0 4px 0 rgba(104, 189, 244, 0.9);
+}
+.donation_add_comment {
+	margin-top: 45px;
+	margin-left: 27px;
+	
+	resize:none !important;
+	font-size:.7em !important;
+	
+	border:1px solid #777777;
+	-webkit-box-shadow:0 2px 2px -1px rgba(0, 0, 0, 0.2) inset, 0 1px rgba(255, 255, 255, 0.3);
+	-webkit-border-radius: 3px !important;
+	float:left;
+}
+.donation_add_comment_focus{
+	border-color: rgba(104, 189, 244, 0.9);
+	box-shadow: 0 0 4px 0 rgba(104, 189, 244, 0.9);	
+}
+.terms_of_use {
+	margin-top: 5px;
+	margin-left: 100px;
+	padding: 0 0;
+	background:#333333;
+	float:left;
+}
+.x-field .x-input-checkbox:checked::after{
+	border-color:#222222;
+}
+
+.payement_amount_btn {
+	margin-top: 15px;
+	margin-right: 17px;
+	background-image: url(../assets/payement_ui/next_btn.png);
+	
+	padding-left:10px;
+	font-size:.7em !important;
+	text-shadow: 0 1px 0 #ffef98;
+	
+	border:none;
+	-webkit-border-radius: 3px;
+	float:right;
+}
+.payement_amount_btn span {
+	text-align:left;
+}
+.payement_amount_btn:active {
+	background-image: url(../assets/payement_ui/next_btn.png);
+	border:none;
+}
+
 
 /*/////////////////////////////////////////////////////
 //					1st TEMPLATE                     //

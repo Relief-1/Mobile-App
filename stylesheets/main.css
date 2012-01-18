@@ -43,10 +43,17 @@
 	padding-top:8px;
 	margin-right: 50px;
 }
-/*.x-toolbar-dark .x-button, .x-toolbar .x-toolbar-dark .x-button, .x-toolbar-dark .x-field-select .x-input-text, .x-toolbar .x-toolbar-dark .x-field-select .x-input-text, .x-toolbar-dark .x-field-select::before, .x-toolbar .x-toolbar-dark .x-field-select::before{
-	-webkit-box-shadow: rgba(70, 70, 70, 0.2) 0 1px 0;
+.x-input-number {
+	content: none;
 }
-.x-toolbar-dark .x-button, .x-toolbar-dark .x-button.x-button-back::after, .x-toolbar-dark .x-button.x-button-forward::after, .x-toolbar .x-toolbar-dark .x-button, .x-toolbar .x-toolbar-dark .x-button.x-button-back::after, .x-toolbar .x-toolbar-dark .x-button.x-button-forward::after, .x-toolbar-dark .x-field-select .x-input-text, .x-toolbar-dark .x-field-select .x-input-text.x-button-back::after, .x-toolbar-dark .x-field-select .x-input-text.x-button-forward::after, .x-toolbar .x-toolbar-dark .x-field-select .x-input-text, .x-toolbar .x-toolbar-dark .x-field-select .x-input-text.x-button-back::after, .x-toolbar .x-toolbar-dark .x-field-select .x-input-text.x-button-forward::after, .x-toolbar-dark .x-field-select::before, .x-toolbar-dark .x-field-select::before.x-button-back::after, .x-toolbar-dark .x-field-select::before.x-button-forward::after, .x-toolbar .x-toolbar-dark .x-field-select::before, .x-toolbar .x-toolbar-dark .x-field-select::before.x-button-back::after, .x-toolbar .x-toolbar-dark .x-field-select::before.x-button-forward::after{
-	background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #646464), color-stop(50%, #434343), color-stop(100%, #242424));
-	background-image:linear-gradient(#646464, #434343 50%, #242424);
-}*/
+.x-toolbar-dark .x-button, .x-toolbar .x-toolbar-dark .x-button, .x-toolbar-dark .x-field-select .x-input-text, .x-toolbar .x-toolbar-dark .x-field-select .x-input-text, .x-toolbar-dark .x-field-select::before, .x-toolbar .x-toolbar-dark .x-field-select::before{
+	-webkit-box-shadow: rgba(35, 35, 35, 0.3) 0 0.1em 0;
+}
+.x-field {min-height: 1.5em;}
+.x-input-el, .x-field input, .x-field textarea, .x-field select, .x-field .x-field-slider, .x-field-toggle, .x-field-slider{
+	min-height: 1.5em;
+	resize:none;
+}
+.x-field input, .x-field textarea, .x-field select, .x-field .x-field-slider {
+	-webkit-box-shadow:0 2px 2px -1px rgba(0, 0, 0, 0.2) inset, 0 1px rgba(255, 255, 255, 0.3);
+}
