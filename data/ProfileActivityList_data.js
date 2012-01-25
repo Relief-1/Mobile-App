@@ -1,5 +1,5 @@
 Ext.regModel('profilActivity', {
-    fields: ['firstName', 'lastName', 'donation', 'donationDate']
+    fields: ['firstName', 'lastName', 'profilPicture', 'location', 'donation', 'donationComment', 'donationDate', 'time' ,'SMHD']
 });
 
 Relief1.profilActivityListStore = new Ext.data.Store({

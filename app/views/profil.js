@@ -86,7 +86,7 @@ var profileActivity = new Ext.XTemplate(
 	'</div>'
 );
 var profileActivityDetails = new Ext.XTemplate(
-	'<b>{firstName} {lastName}</b>'
+	'<b>{firstName} {lastName} {typeOfActivity} {activityName}. {time}{SMHD} ago</b>'
 );
 
 ///////////////////////////////////////////////////////
@@ -116,11 +116,10 @@ var profileActivityToolbar = new Ext.Toolbar({
 
 // Profil Activity Detail
 var profileActivityDetailsPanel = new Ext.Panel({
-	height: 320,
 	layout: 'fit',
 	style: 'background:#DDDDDD',
 	id: 'details',
-	tpl: profileActivityDetails,
+	tpl: profileActivityDetails
 });
 
 // Profile Activity List
@@ -135,7 +134,7 @@ var profileActivityList = new Ext.List({
 		var activityDetailsTitle = '<div style="font-size:.7em;">' + record.data.firstName + " " + record.data.lastName + " </div> " ; // title var
 	    profileActivityToolbar.setTitle(activityDetailsTitle);								// Changed the toolbar title
 		profileActivityDetailsPanel.update(record.data);											// Update the detail panel
-		profileActivityPanel.setActiveItem('details',{type: 'slide', direction: 'left'});		// Set this tapped item
+		profileActivityPanel.setActiveItem(profileActivityDetailsPanel,{type: 'slide', direction: 'left'});		// Set this tapped item
 		profileTopPart.hide();
 		profileLevelHeader.hide();
 		profileLevelContainer.hide();

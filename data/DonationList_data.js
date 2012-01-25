@@ -1,5 +1,5 @@
 Ext.regModel('Donator', {
-    fields: ['firstName', 'lastName', 'donation', 'donationDate']
+    fields: ['firstName', 'lastName', 'profilPicture', 'location', 'donation', 'donationComment', 'donationDate', 'time' ,'SMHD']
 });
 
 Relief1.donationsListStore = new Ext.data.Store({
