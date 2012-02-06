@@ -5,7 +5,7 @@ var moneyRaised = new Ext.Panel({
 	style: 'background: url(assets/disaster_img/joplin_bg1.jpg);',
 	items:[{
 		xtype: 'panel',
-		html: '<span style="font-size:18px;">$5,750 <span style="font-size:12px; padding-top:12px; float:right;">see more</span></span> <br> <span style="font-size:13px; line-height:13px; color:#999999;">money raised</span>',
+		html: '<span style="font-size:18px;">$18,392,157 <span style="font-size:12px; padding-top:12px; float:right;">see more</span></span> <br> <span style="font-size:13px; line-height:13px; color:#999999;">money raised</span>',
 		height: 48,
 		style: 'position:relative; top:200px; background: rgba(10,10,10, .5); padding: .3em .5em; color:white; font-size:14px;',
 	}]
@@ -95,7 +95,7 @@ var DonationListTemplate = new Ext.XTemplate(
 	'<div class="donationList" class="contact">',
 		'<div class="donationPicture2"><img src="{profilPicture}" width="39" height="39" border="0"></div>',
 		'<span class="donationUsername2">',
-			'<div style="float:left;"><b>{firstName} {lastName}</b> donated </div>',
+			'<div style="float:left;"><b>{firstName} {lastName}</b> gave </div>',
 			'<div class="donationAmount2"><b>{donation}</b></div>',
 			'<div class="donationTime2">{time}{SMHD}</div>',
 			'<div class="donationComment2">{donationComment}</div>',
