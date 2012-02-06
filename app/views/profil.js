@@ -35,48 +35,25 @@ var profileTopPart = new Ext.Panel({
 });
 
 ///////////////////////////////////////////////////////
-//				   PROFIL LEVEL 	                 //
-///////////////////////////////////////////////////////
-var profileLevelHeader = new Ext.Panel({
-	height: 25,
-	width: 320,
-	html: '<div class="profileLevelHeaderText">Current level</div>',
-	cls: 'profileLevelHeader'
-});
-var profileLevelArrow = new Ext.Panel({
-	cls: 'profileLevel_arrow'
-});
-var profileLevel = new Ext.Panel({
-	cls: 'profileLevel'
-});
-var profileLevelContainer = new Ext.Panel({
-	height: 50,
-	width: 320,
-	cls: 'profileLevelContainer',
-	items:[profileLevelArrow,profileLevel]
-});
-
-///////////////////////////////////////////////////////
 //				 PROFIL ACTIVITY FEED	             //
 ///////////////////////////////////////////////////////
-var profileLastestHeader = new Ext.Panel({
+var profileLastestHeader = new Ext.Panel ({
 	height: 25,
 	width: 320,
-	html: '<div class="profileLatestHeaderText">Lastest activity</div>',
+	html: '<div class="profileLatestHeaderText">Latest activity</div>',
 	cls: 'profileLatestHeader'
 });
 
 ///////////////////////////////////////////////////////
 //					1st TEMPLATE                     //
 ///////////////////////////////////////////////////////
-var profileActivity = new Ext.XTemplate(
+var profileActivity = new Ext.XTemplate (
 	'<div class="donationList" class="contact">',
 		'<div class="donationPicture2">',
 			'<img src="{profilPicture}" width="39" height="39" border="0">',
-			'<div class="activityPicture"><img src="{activityPicture}" width="39" height="39" border="0"></div>',
 		'</div>',
 		'<span>',
-			'<div style="float:left; font-size:14px; padding-left:20px;"><b>{firstName} {lastName}</b></div>',
+			'<div style="float:left; font-size:14px; padding-left:20px; text-shadow:0 1px 0 #FFFFFF;"><b>{firstName} {lastName}</b></div>',
 			'<div style="float:right; font-size:.6em; color:#999999; text-align:right;">{time}{SMHD}</div>',
 			'<br/><div style="font-size:12px; color:#444444; margin-left:20px !important; float:left;">{typeOfActivity}</div>',
 			'<div style="font-size:12px; line-height:13px; margin-left:5px !important; float:left;"><b>{activityName}</b>{badge}</div>',
@@ -85,8 +62,36 @@ var profileActivity = new Ext.XTemplate(
 		'<div style="width:100%; height:37px;"></div>',
 	'</div>'
 );
-var profileActivityDetails = new Ext.XTemplate(
-	'<b>{firstName} {lastName} {typeOfActivity} {activityName}. {time}{SMHD} ago</b>'
+var profileActivityDetails = new Ext.XTemplate (
+	'<div class="donationDetail_container">',
+	
+		'<div class="donationDetail">',
+		
+			'<div class="donationDetailPicture">',
+				'<img src="{profilPicture}" width="39" height="39" border="0">',
+			'</div>',
+			
+			'<div class="donator_name_detail"><b>{firstName} {lastName}</b>',
+				'<div class="donation_detail_date">{time}{SMHD} ago </div>',
+			'</div>',
+			
+							
+				'<div class="donation_detail_right">',
+					'<div class="donator_donation_detail">{typeOfActivity} <b>{activityName}</b> {badge}</div>',
+					'<div class="donator_donation_comment">{donationComment}</div>',
+				'</div>',
+			
+			
+				'<div class="donator_donation_comment_icon"></div>',
+		'</div>',	
+			
+		'<div class="donation_action_button_container">',
+			'<div class="donation_detail_like_btn">like</div>',
+			'<div class="donation_detail_comment_btn">comment</div>',
+			'<div class="donation_detail_share_btn">share</div>',
+		'</div>',	
+							
+	'</div>'
 );
 
 ///////////////////////////////////////////////////////
@@ -107,8 +112,6 @@ var profileActivityToolbar = new Ext.Toolbar({
 				profileActivityToolbar.setTitle(joplin);
             	profileActivityPanel.setActiveItem('wrapper',{type: 'slide', direction: 'right'});
 				profileTopPart.show();
-				profileLevelHeader.show();
-				profileLevelContainer.show();
 				profileLastestHeader.show();
             }
     }],
@@ -119,7 +122,7 @@ var profileActivityDetailsPanel = new Ext.Panel({
 	layout: 'fit',
 	style: 'background:#DDDDDD',
 	id: 'details',
-	tpl: profileActivityDetails
+	tpl: profileActivityDetails,
 });
 
 // Profile Activity List
@@ -136,8 +139,6 @@ var profileActivityList = new Ext.List({
 		profileActivityDetailsPanel.update(record.data);											// Update the detail panel
 		profileActivityPanel.setActiveItem(profileActivityDetailsPanel,{type: 'slide', direction: 'left'});		// Set this tapped item
 		profileTopPart.hide();
-		profileLevelHeader.hide();
-		profileLevelContainer.hide();
 		profileLastestHeader.hide();
 	},
 });
@@ -167,8 +168,6 @@ Relief1.views.profil = Ext.extend(Ext.Panel, {
 	style: 'background:#222222;',
 	items: [
 		profileTopPart,
-		profileLevelHeader,
-		profileLevelContainer,
 		profileLastestHeader,
 		profileActivityPanel
 	],

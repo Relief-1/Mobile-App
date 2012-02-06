@@ -132,3 +132,114 @@
 	border-radius:3px;
 	-webkit-box-shadow:0 0px 0px rgba(0,0,0,0.3);
 }
+
+/*/////////////////////////////////////////////////////
+//					PROFIL DETAIL                    //
+/////////////////////////////////////////////////////*/
+.donationDetail_container {
+	margin: 0 auto;
+	width: 320px;
+	height:100%;
+	background:url(../assets/feed_ui/listview_bg.png) repeat;
+}
+.donationDetail {
+	width: 300px;
+	padding:.5em;
+	margin: 10px;
+	background: white;
+	float:left;
+	
+	border-radius:5px;
+	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.3);
+}
+.donationDetailPicture {
+	width:41px;
+	height:41px;
+	background:#DDDDDD;
+	float:left;
+	border: solid 1px #555555;
+	border-radius:3px;
+	box-shadow: 0 1px 0 #FFFFFF;
+	-webkit-box-shadow: 0 1px 0 #FFFFFF;
+}
+.donation_detail_right {
+	width: 232px;
+	float:right;
+}
+.donator_name_detail {
+	width: 232px;
+	margin-left: .5em;
+	float:left;
+}
+.donator_donation_detail {
+	width: 232px;
+	margin-left:.6em;
+	font-size:12px;
+	float:right;
+}
+.donator_donation_comment_icon {
+	margin-left: .3em;
+	margin-top: .5em;
+	display:block;
+	width: 30px;
+	height: 30px;
+	background: url(../assets/profil_ui/comment.png) no-repeat;
+	float:left;
+}
+.donator_donation_comment {
+	width: 232px;
+	margin-top:.5em;
+	font-family:georgia;
+	float:right;
+}
+.donation_detail_date {
+	margin-top:.3em;
+	font-size:11px;
+	color: #CCCCCC;
+	float:right !important;
+}
+.donation_action_button_container {
+	margin: 0 auto;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 300px;
+	height:30px;
+	background: url(../assets/profil_ui/action_btn_bg.png);
+	
+	font-size: 12px;
+	text-align: center;
+	line-height:30px;
+	text-shadow:0 1px 0 #FFFFFF;
+	float:left;
+	
+	border-radius:5px;
+	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.3);
+}
+.donation_detail_like_btn {
+	width:99px;
+	height:30px;
+	
+	border-right: solid 1px #AAAAAA;
+	float:left;	
+}
+.donation_detail_comment_btn {
+	width:98px;
+	height:30px;
+	font-size: 12px;
+	border-right: solid 1px #AAAAAA;
+	border-left: solid 1px white;
+	float:left;
+}
+.donation_detail_share_btn {
+	width:99px;
+	height:30px;
+	font-size: 12px;
+	border-left: solid 1px white;
+	float:left;
+}
+
+
+
+
+
+
