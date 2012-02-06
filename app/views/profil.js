@@ -12,15 +12,15 @@ var profileNameInfos = new Ext.Panel({
 	style: 'margin-top:15px; margin-left:10px; float:left;'
 });
 var profileDonationsCounter = new Ext.Button({
-	html: '7<br><span class="counter_name">Donation</span>',
+	html: '2<br><span class="counter_name">donations</span>',
 	cls: 'profileDonationsCounter'
 });
 var profileIndirectDonationsCounter = new Ext.Button({
-	html: '24<br><span class="counter_name">Indirect</span>',
+	html: '9<br><span class="counter_name">following</span>',
 	cls: 'profileIndirectDonationsCounter',
 });
 var profileBadgesCounter = new Ext.Button({
-	html: '9<br><span class="counter_name">Badges</span>',
+	html: '37<br><span class="counter_name">followers</span>',
 	cls: 'profileBadgesCounter'
 });
 var profileCountersContainer = new Ext.Panel({

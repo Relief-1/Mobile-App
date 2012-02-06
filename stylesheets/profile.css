@@ -22,7 +22,7 @@
 //					PROFIL COUNTERS                  //
 /////////////////////////////////////////////////////*/
 .profileCountersContainer {
-	width:161px;
+	width:167px;
 	height:50px !important;
 	background: rgba(0,0,0,0.2);
 	margin-left:8px;
@@ -34,7 +34,7 @@
 	-webkit-border-radius:7px;
 }
 .profileDonationsCounter, .profileIndirectDonationsCounter, .profileBadgesCounter {
-	width:51px;
+	width:53px;
 	height:46px;
 	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #222222));
 	border: 1px solid black;
@@ -46,15 +46,15 @@
 }
 .profileDonationsCounter {
 	margin-left:	0px;
-	padding-left:	4px !important;
+	padding-left:	5px !important;
 }
 .profileIndirectDonationsCounter {
 	margin-left:	2px;
-	padding-left:	8px !important;
+	padding-left:	4px !important;
 }
 .profileBadgesCounter {
 	margin-left:	2px;
-	padding-left:	8px !important;
+	padding-left:	5px !important;
 }
 .counter_name {
 	width:			100%;
@@ -189,6 +189,7 @@
 .donator_donation_comment {
 	width: 232px;
 	margin-top:.5em;
+	font-size:14px;
 	font-family:georgia;
 	float:right;
 }
@@ -237,9 +238,3 @@
 	border-left: solid 1px white;
 	float:left;
 }
-
-
-
-
-
-
