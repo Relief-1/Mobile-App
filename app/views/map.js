@@ -49,7 +49,6 @@ mapdemo = new Ext.Map({
                 }
             };
             
-            google.maps.event.addListener(map, 'drag', closeInfoWindow);
             google.maps.event.addListener(map, 'click', closeInfoWindow);
             
             
