@@ -1,17 +1,12 @@
 var position1 = new google.maps.LatLng(37.083667,-94.513149);  //Joplin
 var position2 = new google.maps.LatLng(35.818889,-78.644722);  //Sencha HQ
 
-infowindow1 = new google.maps.InfoWindow({
-    content: 'Joplin Missouri Tornado'
-}),
+//TODO: Auto Center
 
-infowindow2 = new google.maps.InfoWindow({
-    content: 'Raleigh Tornado'
-}),
-
-//Tracking Marker Image
-        
-
+var infowindow = new google.maps.InfoWindow({
+    content: null
+});
+            
 mapdemo = new Ext.Map({
 
     mapOptions : {
@@ -23,42 +18,58 @@ mapdemo = new Ext.Map({
             style: google.maps.NavigationControlStyle.DEFAULT
         }
     },
-
+    
 
     listeners : {
         maprender : function(comp, map){
-            var marker = new google.maps.Marker({
+            
+            var markers = [];
+            markers[0] = new google.maps.Marker({
                 position: position1,
                 title : 'Joplin Missouri',
                 map: map,
+                html:'Joplin Missouri Tornado',
                 icon:'assets/markers/normal-marker.png'
             });
-            var marker2 = new google.maps.Marker({
+            markers[1] = new google.maps.Marker({
                 position: position2,
                 title : 'Raleigh',
                 map: map,
+                html:'Raleigh Tornado',
                 icon:'assets/markers/normal-marker.png'
             });
 
-            google.maps.event.addListener(marker, 'click', function() {
-                infowindow1.open(map, marker);
-                marker.setIcon('assets/markers/clicked-marker.png');
-            });
-            google.maps.event.addListener(infowindow1, 'closeclick', function() {
-                marker.setIcon('assets/markers/normal-marker.png');
-            });
-            google.maps.event.addListener(marker2, 'click', function() {
-                infowindow2.open(map, marker2);
-                marker2.setIcon('assets/markers/clicked-marker.png');
-            });
-            google.maps.event.addListener(infowindow2, 'closeclick', function() {
-                marker2.setIcon('assets/markers/normal-marker.png');
-            });
-            setTimeout( function(){
-                map.panTo (position1);
-            } , 1000);
-        }
+            
+           
+            closeInfoWindow = function() {
+                infowindow.close();
+                for (var i = 0; i < markers.length; i++) {
+                    var marker = markers[i];
+                    marker.setIcon('assets/markers/normal-marker.png');
+                }
+            };
+            
+            google.maps.event.addListener(map, 'drag', closeInfoWindow);
+            google.maps.event.addListener(map, 'click', closeInfoWindow);
+            
+            
+            for (var i = 0; i < markers.length; i++) {
 
+                var marker = markers[i];
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow.open(map, this);
+                    infowindow.setContent(this.html);
+                    this.setIcon('assets/markers/clicked-marker.png')
+                });
+                google.maps.event.addListener(infowindow, 'closeclick', function() {
+                    this.setIcon('assets/markers/normal-marker.png');
+                });
+                setTimeout( function(){
+                    map.panTo (position1);
+                } , 1000);
+            }
+        }
     }
 });
 
