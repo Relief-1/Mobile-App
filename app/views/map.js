@@ -1,5 +1,5 @@
 var position1 = new google.maps.LatLng(37.083667,-94.513149);  //Joplin
-var position2 = new google.maps.LatLng(35.818889,-78.644722);  //Sencha HQ
+var position2 = new google.maps.LatLng(35.818889,-78.644722);  //Raleigh
 
 //TODO: Auto Center
 
