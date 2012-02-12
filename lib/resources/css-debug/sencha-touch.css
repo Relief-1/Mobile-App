@@ -4079,7 +4079,7 @@ input, textarea {
   top:-0.5em;
   overflow: visible;
   width: 100%;
-  height: 2.7em;
+  height: auto;
   margin-bottom: -1em;
 }
 /* line 106, ../themes/stylesheets/sencha-touch/default/widgets/_list.scss */
@@ -4124,19 +4124,11 @@ input, textarea {
 }
 /* line 143, ../themes/stylesheets/sencha-touch/default/widgets/_list.scss */
 .x-list .x-list-item.x-item-pressed {
-  border-top-color: #77b2f8;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #16a4ff), color-stop(100%, #006ad7));
+
 }
 /* line 151, ../themes/stylesheets/sencha-touch/default/widgets/_list.scss */
 .x-list .x-list-item.x-item-pressed {
-  background-color: #06346a;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #16a4ff), color-stop(100%, #006ad7));
-  background-image: linear-gradient(#167bf3, #07448c 2%, #042348);
-  color: white;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
-  border-top-color: #084b9b;
-  border-bottom-color: #021022;
-  -webkit-tap-highlight-color: background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #16a4ff), color-stop(100%, #006ad7));
+
 }
 
 /* line 164, ../themes/stylesheets/sencha-touch/default/widgets/_list.scss */
