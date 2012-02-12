@@ -60,15 +60,24 @@ mapdemo = new Ext.Map({
                 google.maps.event.addListener(marker, 'click', function () {
                     infowindow.open(map, this);
                     infowindow.setContent(this.html);
-                    this.setIcon('assets/markers/clicked-marker.png')
+                    this.setIcon('assets/markers/clicked-marker.png');
+                    for (var i = 0; i < markers.length; i++) {
+                        var offMarker = markers[i];
+                        if (offMarker != this){
+                            offMarker.setIcon('assets/markers/normal-marker.png');
+                        }
+                    }
                 });
-                google.maps.event.addListener(infowindow, 'closeclick', function() {
-                    this.setIcon('assets/markers/normal-marker.png');
-                });
-                setTimeout( function(){
-                    map.panTo (position1);
-                } , 1000);
+            //                setTimeout( function(){
+            //                    map.panTo (position1);
+            //                } , 1000);
             }
+            google.maps.event.addListener(infowindow, 'closeclick', function() {
+                for (var i = 0; i < markers.length; i++) {
+                    var marker = markers[i];
+                    marker.setIcon('assets/markers/normal-marker.png');
+                }
+            });
         }
     }
 });
