@@ -79,13 +79,17 @@ var ToggleStoriesDonationButton = new Ext.form.Toggle({
         change: function(slider, thumb, newValue, oldValue){
             if (oldValue == 0 && newValue == 1) {
             // Changing from off to on...do something?
-                storyListWrapper.show();
-                donationListWrapper.hide();
+                DonationsPanel.setActiveItem(storyListWrapper,{
+		            type: 'slide', 
+		            direction: 'left'
+		        });
             }
             else if (oldValue == 1 && newValue == 0){
                 // Changing from on to off...do something?
-                storyListWrapper.hide();
-                donationListWrapper.show();
+				DonationsPanel.setActiveItem(donationListWrapper,{
+		            type: 'slide', 
+		            direction: 'right'
+		        });
                 }
         }
     }
