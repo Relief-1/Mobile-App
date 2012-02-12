@@ -1,10 +1,13 @@
-var position1 = new google.maps.LatLng(37.083667,-94.513149);  //Sencha HQ
-var position2 = new google.maps.LatLng(37.46685,-122.158592);  //Sencha HQ
+var position1 = new google.maps.LatLng(37.083667,-94.513149);  //Joplin
+var position2 = new google.maps.LatLng(35.818889,-78.644722);  //Sencha HQ
 
-infowindow = new google.maps.InfoWindow({
-    content: 'Sencha Touch HQ'
+infowindow1 = new google.maps.InfoWindow({
+    content: 'Joplin Missouri Tornado'
 }),
-        
+
+infowindow2 = new google.maps.InfoWindow({
+    content: 'Raleigh Tornado'
+}),
 
 //Tracking Marker Image
         
@@ -12,8 +15,8 @@ infowindow = new google.maps.InfoWindow({
 mapdemo = new Ext.Map({
 
     mapOptions : {
-        center : new google.maps.LatLng(7.083667,-94.513149),  //nearby San Fran
-        zoom : 7     ,
+        center : new google.maps.LatLng(37.083667,-94.513149),  //nearby San Fran
+        zoom : 4,
         mapTypeId : google.maps.MapTypeId.ROADMAP,
         navigationControl: true,
         navigationControlOptions: {
@@ -26,23 +29,30 @@ mapdemo = new Ext.Map({
         maprender : function(comp, map){
             var marker = new google.maps.Marker({
                 position: position1,
-                title : 'Sencha HQ',
+                title : 'Joplin Missouri',
                 map: map,
-                icon:'assets/normal-marker.png'
+                icon:'assets/markers/normal-marker.png'
             });
             var marker2 = new google.maps.Marker({
                 position: position2,
-                title : 'Sencha HQ',
+                title : 'Raleigh',
                 map: map,
-                icon:'assets/normal-marker.png'
+                icon:'assets/markers/normal-marker.png'
             });
 
             google.maps.event.addListener(marker, 'click', function() {
-                infowindow.open(map, marker);
-                marker.setIcon('assets/clicked-marker.png');
+                infowindow1.open(map, marker);
+                marker.setIcon('assets/markers/clicked-marker.png');
             });
-            google.maps.event.addListener(infowindow, 'closeclick', function() {
-                marker.setIcon('assets/normal-marker.png');
+            google.maps.event.addListener(infowindow1, 'closeclick', function() {
+                marker.setIcon('assets/markers/normal-marker.png');
+            });
+            google.maps.event.addListener(marker2, 'click', function() {
+                infowindow2.open(map, marker2);
+                marker2.setIcon('assets/markers/clicked-marker.png');
+            });
+            google.maps.event.addListener(infowindow2, 'closeclick', function() {
+                marker2.setIcon('assets/markers/normal-marker.png');
             });
             setTimeout( function(){
                 map.panTo (position1);
