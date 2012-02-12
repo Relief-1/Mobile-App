@@ -72,19 +72,19 @@ var ToggleStoriesDonationButton = new Ext.form.Toggle({
     xtype: 'togglefield',
     height: 40,
     width: 320,
-    value: 0,
+    value: 1,
     label:"Latest",
     style: 'background:none',
     listeners: {
         change: function(slider, thumb, newValue, oldValue){
-            if (oldValue == 0 && newValue == 1) {
+            if (oldValue == 1 && newValue == 0) {
             // Changing from off to on...do something?
                 DonationsPanel.setActiveItem(storyListWrapper,{
 		            type: 'slide', 
 		            direction: 'left'
 		        });
             }
-            else if (oldValue == 1 && newValue == 0){
+            else if (oldValue == 0 && newValue == 1){
                 // Changing from on to off...do something?
 				DonationsPanel.setActiveItem(donationListWrapper,{
 		            type: 'slide', 

@@ -55,14 +55,14 @@ mapdemo = new Ext.Map({
                 }
             };
             
-            google.maps.event.addListener(map, 'click', closeInfoWindow);
+            google.maps.event.addListener(map, 'mousedown', closeInfoWindow);
             
           
             for (var i = 0; i < markers.length; i++) {
 
                 var marker = markers[i];
 
-                google.maps.event.addListener(marker, 'click', function () {
+                google.maps.event.addListener(marker, 'mousedown', function () {
                     infowindow.open(map, this);
                     infowindow.setContent(this.html);
                     this.setIcon('assets/markers/tornado-active-marker.png');
@@ -77,7 +77,7 @@ mapdemo = new Ext.Map({
             //                    map.panTo (position1);
             //                } , 1000);
             }
-            google.maps.event.addListener(infowindow, 'closeclick', function() {
+            google.maps.event.addListener(infowindow, 'mousedown', function() {
                 for (var i = 0; i < markers.length; i++) {
                     var marker = markers[i];
                     marker.setIcon('assets/markers/tornado-normal-marker.png');
