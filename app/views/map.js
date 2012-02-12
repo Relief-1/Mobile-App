@@ -6,6 +6,10 @@ var position2 = new google.maps.LatLng(35.818889,-78.644722);  //Raleigh
 var infowindow = new google.maps.InfoWindow({
     content: null
 });
+var mapToolbar = new Ext.Toolbar({
+	xtype: 'toolbar',
+	title: '<div style="font-size:.7em;">Around the world</div>',
+});
             
 mapdemo = new Ext.Map({
 
@@ -28,15 +32,17 @@ mapdemo = new Ext.Map({
                 position: position1,
                 title : 'Joplin Missouri',
                 map: map,
+			    animation: google.maps.Animation.DROP,
                 html:'Joplin Missouri Tornado',
-                icon:'assets/markers/normal-marker.png'
+                icon:'assets/markers/tornado-normal-marker.png'
             });
             markers[1] = new google.maps.Marker({
                 position: position2,
                 title : 'Raleigh',
                 map: map,
+			    animation: google.maps.Animation.DROP,
                 html:'Raleigh Tornado',
-                icon:'assets/markers/normal-marker.png'
+                icon:'assets/markers/tornado-normal-marker.png'
             });
 
             
@@ -45,7 +51,7 @@ mapdemo = new Ext.Map({
                 infowindow.close();
                 for (var i = 0; i < markers.length; i++) {
                     var marker = markers[i];
-                    marker.setIcon('assets/markers/normal-marker.png');
+                    marker.setIcon('assets/markers/tornado-normal-marker.png');
                 }
             };
             
@@ -59,11 +65,11 @@ mapdemo = new Ext.Map({
                 google.maps.event.addListener(marker, 'click', function () {
                     infowindow.open(map, this);
                     infowindow.setContent(this.html);
-                    this.setIcon('assets/markers/clicked-marker.png');
+                    this.setIcon('assets/markers/tornado-active-marker.png');
                     for (var i = 0; i < markers.length; i++) {
                         var offMarker = markers[i];
                         if (offMarker != this){
-                            offMarker.setIcon('assets/markers/normal-marker.png');
+                            offMarker.setIcon('assets/markers/tornado-normal-marker.png');
                         }
                     }
                 });
@@ -74,7 +80,7 @@ mapdemo = new Ext.Map({
             google.maps.event.addListener(infowindow, 'closeclick', function() {
                 for (var i = 0; i < markers.length; i++) {
                     var marker = markers[i];
-                    marker.setIcon('assets/markers/normal-marker.png');
+                    marker.setIcon('assets/markers/tornado-normal-marker.png');
                 }
             });
         }
@@ -82,7 +88,6 @@ mapdemo = new Ext.Map({
 });
 
 new Ext.Panel({
-    fullscreen: true,
     dockedItems: [toolbar],
     items: [mapdemo]
 });
@@ -91,6 +96,7 @@ Relief1.views.map = Ext.extend(Ext.Panel, {
     title: 'Map',
     iconCls: 'map',
     layout: 'vbox',
-    items: [mapdemo]
+    items: [mapdemo],
+	dockedItems: [mapToolbar]
 });
 Ext.reg('Map', Relief1.views.map);

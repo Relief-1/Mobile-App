@@ -147,6 +147,7 @@ var profileActivityWrapper = new Ext.Panel({
 	id: 'wrapper',
 	layout: 'fit',
 	items: [profileActivityList],
+	dockedItem: [profileActivityToolbar]
 });
 var profileActivityPanel = new Ext.Panel({
     layout: 'card',
