@@ -57,7 +57,7 @@ mapdemo = new Ext.Map({
             
             google.maps.event.addListener(map, 'click', closeInfoWindow);
             
-            
+          
             for (var i = 0; i < markers.length; i++) {
 
                 var marker = markers[i];
