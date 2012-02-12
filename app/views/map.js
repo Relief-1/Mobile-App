@@ -82,6 +82,8 @@ mapdemo = new Ext.Map({
                     var marker = markers[i];
                     marker.setIcon('assets/markers/tornado-normal-marker.png');
                 }
+                Relief1.views.viewport = new Relief1.views.Viewport();
+                Relief1.views.viewport.setActiveItem(Relief1.views.feed);
             });
         }
     }
