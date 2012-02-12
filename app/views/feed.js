@@ -252,10 +252,7 @@ var payementProcessMoney = new Ext.Panel({
             cls: 'payement_amount_btn',
         }]
     }]
-});
-
-
-
+	});
 
 ///////////////////////////////////////////////////////
 //					DONATION PANEL					 //
