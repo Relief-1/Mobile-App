@@ -1,8 +1,9 @@
-var position1 = new google.maps.LatLng(37.083667,-94.513149);  //Joplin
-var position2 = new google.maps.LatLng(35.818889,-78.644722);  //Raleigh
+var positionJoplin = new google.maps.LatLng(37.083667,-94.513149);  // Joplin
+var positionHaiti = new google.maps.LatLng(18.540001,-72.339907);  	// Haiti
+var positionVan = new google.maps.LatLng(38.494167,43.38);  		// Van
+var positionTohoku = new google.maps.LatLng(38.267,140.867);  		// Tohoku
 
 //TODO: Auto Center
-
 var infowindow = new google.maps.InfoWindow({
     content: null
 });
@@ -15,7 +16,7 @@ mapdemo = new Ext.Map({
 
     mapOptions : {
         center : new google.maps.LatLng(37.083667,-94.513149),  //nearby San Fran
-        zoom : 4,
+        zoom : 3,
         mapTypeId : google.maps.MapTypeId.ROADMAP,
         navigationControl: true,
         navigationControlOptions: {
@@ -29,19 +30,35 @@ mapdemo = new Ext.Map({
             
             var markers = [];
             markers[0] = new google.maps.Marker({
-                position: position1,
-                title : 'Joplin Missouri',
+                position: positionJoplin,
+                title : 'Joplin Missouri, USA',
                 map: map,
 			    animation: google.maps.Animation.DROP,
                 html:'Joplin Missouri Tornado',
                 icon:'assets/markers/tornado-normal-marker.png'
             });
             markers[1] = new google.maps.Marker({
-                position: position2,
-                title : 'Raleigh',
+                position: positionHaiti,
+                title : 'Port-aux-Prince Earthquake, Haiti',
                 map: map,
 			    animation: google.maps.Animation.DROP,
-                html:'Raleigh Tornado',
+                html:'Port-aux-Prince, Hait',
+                icon:'assets/markers/tornado-normal-marker.png'
+            });
+			markers[2] = new google.maps.Marker({
+                position: positionVan,
+                title : 'Van, Turkey',
+                map: map,
+			    animation: google.maps.Animation.DROP,
+                html:'Van Eartquake, Turkey',
+                icon:'assets/markers/tornado-normal-marker.png'
+            });
+			markers[3] = new google.maps.Marker({
+                position: positionTohoku,
+                title : 'Tohoku Tsunami, Japan',
+                map: map,
+			    animation: google.maps.Animation.DROP,
+                html:'Tohoku, Japan',
                 icon:'assets/markers/tornado-normal-marker.png'
             });
 

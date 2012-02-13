@@ -5,7 +5,7 @@ var moneyRaised = new Ext.Panel({
     style: 'background: url(assets/disaster_img/joplin_bg1.jpg);',
     items:[{
         xtype: 'panel',
-        html: '<span style="font-size:18px;">$5,750 <span style="font-size:12px; padding-top:12px; float:right;">see more</span></span> <br> <span style="font-size:13px; line-height:13px; color:#999999;">money raised</span>',
+        html: '<span style="font-size:18px;">$18,750,450 <span style="font-size:12px; padding-top:12px; float:right;">see more</span></span> <br> <span style="font-size:13px; line-height:13px; color:#999999;">money raised</span>',
         height: 48,
         style: 'position:relative; top:200px; background: rgba(10,10,10, .5); padding: .3em .5em; color:white; font-size:14px;',
     }]
@@ -28,6 +28,8 @@ var topInfluencer = new Ext.Panel({
         style: 'position:relative; top:200px; background: rgba(10,10,10, .5); padding: .3em .5em; color:white; font-size:14px;',
     }]
 });
+
+// 2ND JOPLIN SCREEN FEED
 var DisasterNamePanel = new Ext.Panel({
     height: 67,
     width: 320,
@@ -51,19 +53,137 @@ var DisasterNamePanel = new Ext.Panel({
         }
     }]
 })
-
 var DisasterImagePanel = new Ext.Carousel({
     height: 245,
     width: 320,
     items: [moneyRaised, topDonator, topInfluencer],
     style: 'background:black;'
 });
-
 var DisasterPanel = new Ext.Panel({
     height: 245,
     width: 320,
     items: [DisasterImagePanel,DisasterNamePanel]
 })
+
+// 1ST MAIN SCREEN FEED 
+
+//	JOPLIN DISASTER
+var MAIN_Joplin_img = new Ext.Panel({
+	height:160,
+	width: 320,
+    style: 'background: url(assets/disaster_img/joplin_bg.jpg) 0px -30px;'
+});
+var MAIN_Joplin_DisasterNamePanel = new Ext.Panel({
+    height: 67,
+    width: 320,
+    html: '<div style="float:left; padding: .7em .7em;"> Joplin, MO, USA <br/> Tornado</div>',
+    style: 'position:relative; bottom:130px;  background: rgba(10,10,10, .7); color:white; font-size:17px; font-weight:bold;',
+	items: [{
+		width: '100%',
+		height: '100%',
+		xtype: 'button',
+		style: 'position:absolute; border-radius:2px; background:none; border:none;',
+		handler: function() {
+			var joplinBtn = '<div style="font-size:.7em;">Joplin Tornado - USA</div>';
+    	    donationDetailsToolbar.setTitle(joplinBtn);
+			feedContainer.setActiveItem('joplinwrapper',{type: 'slide', direction: 'left'});
+		}
+	}]
+})
+var MAIN_Joplin = new Ext.Panel({
+    height: 165,
+    width: 320,
+    items: [MAIN_Joplin_img,MAIN_Joplin_DisasterNamePanel]
+})
+
+//	HAITI DISASTER
+var MAIN_Haiti_img = new Ext.Panel({
+	height:160,
+	width: 320,
+    style: 'background: url(assets/disaster_img/haiti_bg1.jpg) 0px -10px;'
+});
+var MAIN_Haiti_DisasterNamePanel = new Ext.Panel({
+    height: 67,
+    width: 320,
+    html: '<div style="float:left; padding: .7em .7em;"> Port-aux-Prince, Haiti <br/> Earthquake</div>',
+    style: 'position:relative; bottom:130px; background: rgba(10,10,10, .7); color:white; font-size:17px; font-weight:bold;',
+	items: [{
+		width: '100%',
+		height: '100%',
+		xtype: 'button',
+		style: 'position:absolute; border-radius:2px; background:none; border:none;',
+		handler: function() {
+			var joplinBtn = '<div style="font-size:.7em;">Port-aux-Prince Earthquake - Haiti</div>';
+    	    donationDetailsToolbar.setTitle(joplinBtn);
+			feedContainer.setActiveItem('joplinwrapper',{type: 'slide', direction: 'left'});
+		}
+	}]
+})
+var MAIN_Haiti = new Ext.Panel({
+    height: 165,
+    width: 320,
+    items: [MAIN_Haiti_img,MAIN_Haiti_DisasterNamePanel]
+})
+
+//	TOHOKU DISASTER
+var MAIN_Tohoku_img = new Ext.Panel({
+	height:160,
+	width: 320,
+    style: 'background: url(assets/disaster_img/japan_bg1.jpg) 0px -10px;'
+});
+var MAIN_Tohoku_DisasterNamePanel = new Ext.Panel({
+    height: 67,
+    width: 320,
+    html: '<div style="float:left; padding: .7em .7em;"> Tohoku, Japan <br/> Tsunami</div>',
+    style: 'position:relative; bottom:130px; background: rgba(10,10,10, .7); color:white; font-size:17px; font-weight:bold;',
+	items: [{
+		width: '100%',
+		height: '100%',
+		xtype: 'button',
+		style: 'position:absolute; border-radius:2px; background:none; border:none;',
+		handler: function() {
+			var joplinBtn = '<div style="font-size:.7em;">Tohoku Tsunami - Japan</div>';
+    	    donationDetailsToolbar.setTitle(joplinBtn);
+			feedContainer.setActiveItem('joplinwrapper',{type: 'slide', direction: 'left'});
+		}
+	}]
+})
+var MAIN_Tohoku = new Ext.Panel({
+    height: 165,
+    width: 320,
+    items: [MAIN_Tohoku_img,MAIN_Tohoku_DisasterNamePanel]
+})
+
+//	VAN DISASTER
+var MAIN_Van_img = new Ext.Panel({
+	height:160,
+	width: 320,
+    style: 'background: url(assets/disaster_img/van_bg1.jpg) 0px -30px;'
+});
+var MAIN_Van_DisasterNamePanel = new Ext.Panel({
+    height: 67,
+    width: 320,
+    html: '<div style="float:left; padding: .7em .7em;"> Van, Turkey <br/> Earthquake</div>',
+    style: 'position:relative; bottom:130px; background: rgba(10,10,10, .7); color:white; font-size:17px; font-weight:bold;',
+	items: [{
+		width: '100%',
+		height: '100%',
+		xtype: 'button',
+		style: 'position:absolute; border-radius:2px; background:none; border:none;',
+		handler: function() {
+			var joplinBtn = '<div style="font-size:.7em;">Van Earthquake - Turkey</div>';
+    	    donationDetailsToolbar.setTitle(joplinBtn);
+			feedContainer.setActiveItem('joplinwrapper',{type: 'slide', direction: 'left'});
+		}
+	}]
+})
+var MAIN_Van = new Ext.Panel({
+    height: 165,
+    width: 320,
+    items: [MAIN_Van_img,MAIN_Van_DisasterNamePanel]
+})
+
+
 
 ///////////////////////////////////////////////////////
 //		LATEST 'Donations/Stories' TOGGLE BAR		 //
@@ -260,7 +380,7 @@ var payementProcessMoney = new Ext.Panel({
 var donationDetailsToolbar = new Ext.Toolbar({
     xtype: 'toolbar',
     ui: 'dark',
-    title: '<div style="font-size:.7em;">Joplin Tornado - USA</div>',
+    title: '<div style="font-size:.7em;">Relief1</div>',
     items: [{
         text: 'back',
         ui: 'back',
@@ -348,10 +468,7 @@ var DonationsPanel = new Ext.Panel({
     items: [donationListWrapper,storyListWrapper,donationdetailPanel,payementProcessOrg,payementProcessMoney],
 });
 
-///////////////////////////////////////////////////////
-//				WHOLE SCREEN CONTAINER				 //
-///////////////////////////////////////////////////////
-Relief1.views.feed = Ext.extend(Ext.Panel, {
+var joplinContainer = new Ext.Panel({
     fullscreen: true,
     scroll: 'vertical',
     layout: 'vbox',
@@ -359,6 +476,44 @@ Relief1.views.feed = Ext.extend(Ext.Panel, {
     iconCls: 'feed',
     style: 'background:#222222',
     items: [DisasterPanel,LatestHeader,DonationsPanel],
+})
+//  JOPLIN DISASTER END HERE    ////////////////////////////
+
+//  1ST MAIN FEED SCREEN ////////////////////////////
+var disasterFeedList = new Ext.Panel ({
+	width: 320,
+	scroll: 'vertical',
+	items: [MAIN_Joplin,MAIN_Haiti,MAIN_Tohoku,MAIN_Van]
+});
+var joplinDisasterWrapper = new Ext.Panel({
+    id: 'joplinwrapper',
+    layout: 'fit',
+    items: [joplinContainer],
+});
+var disasterListWrapper = new Ext.Panel({
+    id: 'disasterListwrapper',
+    layout: 'fit',
+    items: [disasterFeedList],
+});
+var feedContainer = new Ext.Panel({
+	layout: 'card',
+    width: 320,
+    height: 1380,	
+    fullscreen: false,
+    items: [disasterListWrapper,joplinDisasterWrapper],
+})
+
+
+///////////////////////////////////////////////////////
+//				WHOLE SCREEN CONTAINER				 //
+///////////////////////////////////////////////////////
+Relief1.views.feed = Ext.extend(Ext.Panel, {
+    fullscreen: false,
+ 	layout: 'vbox',
+    title: 'Feed',
+    iconCls: 'feed',
+    style: 'background:#222222',
+    items: [feedContainer],
     dockedItems: [donationDetailsToolbar,payementProcessMoneyToolbar],
 });
 

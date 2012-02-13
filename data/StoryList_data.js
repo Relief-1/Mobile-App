@@ -24,6 +24,21 @@ Relief1.storyListStore = new Ext.data.Store({
 			teaser: "Modest Donation from CocaCola",
 			picture:"assets/donators_img/ashton.jpg",
 			organization: "Coca"
-		}
+		},	{ 
+			title: "CocaCola",
+			teaser: "Modest Donation from CocaCola",
+			picture:"assets/donators_img/ashton.jpg",
+			organization: "Coca" 
+		},	{ 
+			title: "CocaCola",
+			teaser: "Modest Donation from CocaCola",
+			picture:"assets/donators_img/ashton.jpg",
+			organization: "Coca"
+		},	{ 
+			title: "CocaCola",
+			teaser: "Modest Donation from CocaCola",
+			picture:"assets/donators_img/ashton.jpg",
+			organization: "Coca"
+			}	
     ]
 });

@@ -205,7 +205,7 @@
 	margin-right: 10px;
 	width: 300px;
 	height:30px;
-	background: url(../assets/profil_ui/action_btn_bg.png);
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(2%, #FFFFFF), color-stop(3%, #EEEEEE), color-stop(98%, #CCCCCC), color-stop(100%, #AAAAAA));
 	
 	font-size: 12px;
 	text-align: center;

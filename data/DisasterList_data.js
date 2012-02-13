@@ -1,8 +1,8 @@
-Ext.regModel('Contact', {
-    fields: ['firstName', 'lastName', 'donation', 'donationDate']
+Ext.regModel('disaster_list', {
+    fields: ['firstName', 'lastName', 'profilPicture', 'location', 'donation', 'donationComment', 'donationDate', 'time' ,'SMHD']
 });
 
-DisasterList.ListStore = new Ext.data.Store({
+Relief1.disasterListStore = new Ext.data.Store({
     model: 'disaster_list', 
     sorters: 'disaster_country',
     getGroupString : function(record) {
