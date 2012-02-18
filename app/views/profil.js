@@ -166,6 +166,7 @@ var profileActivityList = new Ext.List({
 	scroll:false,
 	itemTpl: profileActivity,
 	grouped: false,
+	style: 'background:#222222;',
 	onItemDisclosure: function(record) {													// Once a donation is tapped
 		var activityDetailsTitle = '<div style="font-size:.7em;">' + record.data.firstName + " " + record.data.lastName + " </div> " ; // title var
 	    profileActivityToolbar.setTitle(activityDetailsTitle);								// Changed the toolbar title

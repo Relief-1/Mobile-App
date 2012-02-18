@@ -452,6 +452,7 @@ var donationList = new Ext.List({
 var donationdetailPanel = new Ext.Panel({
     layout: 'fit',
     tpl: DonationDetailsTemplate,
+	scroll: true,
 });
 // Story List
 var storyList = new Ext.List({
@@ -482,8 +483,10 @@ var storyListWrapper = new Ext.Panel({
 var DonationsPanel = new Ext.Panel({
     layout: 'card',
     width: 320,
-    height: 1380,	
-    fullscreen: false,
+	width: 320,
+	height: 2155,
+	scroll: true,
+	fullscreen: false,
     items: [donationListWrapper,storyListWrapper,donationdetailPanel,payementProcessOrg,payementProcessMoney],
 });
 

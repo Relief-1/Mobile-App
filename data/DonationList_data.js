@@ -212,7 +212,7 @@ Relief1.donationsListStore = new Ext.data.Store({
 		},	{ 
 			firstName: "Ghislaine",
 			lastName: "Guerin",
-			profilPicture:"assets/donators_img/ghislaine.png",
+			profilPicture:"assets/donators_img/ghislaine.jpg",
 			location: "Poitiers, France",
 			donation:'$5',
 			typeOfActivity:'gave',
