@@ -77,7 +77,7 @@ var MAIN_Joplin_DisasterNamePanel = new Ext.Panel({
     height: 67,
     width: 320,
     html: '<div style="float:left; padding: .7em .7em;"> Joplin, MO, USA <br/> Tornado</div>',
-    style: 'position:relative; bottom:130px;  background: rgba(10,10,10, .7); color:white; font-size:17px; font-weight:bold;',
+    style: 'position:relative; bottom:160px;  background: rgba(10,10,10, .7); color:white; font-size:17px; font-weight:bold;',
 	items: [{
 		width: '100%',
 		height: '100%',
@@ -106,7 +106,7 @@ var MAIN_Haiti_DisasterNamePanel = new Ext.Panel({
     height: 67,
     width: 320,
     html: '<div style="float:left; padding: .7em .7em;"> Port-aux-Prince, Haiti <br/> Earthquake</div>',
-    style: 'position:relative; bottom:130px; background: rgba(10,10,10, .7); color:white; font-size:17px; font-weight:bold;',
+    style: 'position:relative; bottom:160px; background: rgba(10,10,10, .7); color:white; font-size:17px; font-weight:bold;',
 	items: [{
 		width: '100%',
 		height: '100%',
@@ -135,7 +135,7 @@ var MAIN_Tohoku_DisasterNamePanel = new Ext.Panel({
     height: 67,
     width: 320,
     html: '<div style="float:left; padding: .7em .7em;"> Tohoku, Japan <br/> Tsunami</div>',
-    style: 'position:relative; bottom:130px; background: rgba(10,10,10, .7); color:white; font-size:17px; font-weight:bold;',
+    style: 'position:relative; bottom:160px; background: rgba(10,10,10, .7); color:white; font-size:17px; font-weight:bold;',
 	items: [{
 		width: '100%',
 		height: '100%',
@@ -164,7 +164,7 @@ var MAIN_Van_DisasterNamePanel = new Ext.Panel({
     height: 67,
     width: 320,
     html: '<div style="float:left; padding: .7em .7em;"> Van, Turkey <br/> Earthquake</div>',
-    style: 'position:relative; bottom:130px; background: rgba(10,10,10, .7); color:white; font-size:17px; font-weight:bold;',
+    style: 'position:relative; bottom:160px; background: rgba(10,10,10, .7); color:white; font-size:17px; font-weight:bold;',
 	items: [{
 		width: '100%',
 		height: '100%',
@@ -199,14 +199,14 @@ var ToggleStoriesDonationButton = new Ext.form.Toggle({
         change: function(slider, thumb, newValue, oldValue){
             if (oldValue == 1 && newValue == 0) {
             // Changing from off to on...do something?
-                DonationsPanel.setActiveItem(storyListWrapper,{
+                DonationsPanel.setActiveItem('joplinstorylistwrapper',{
 		            type: 'slide', 
 		            direction: 'left'
 		        });
             }
             else if (oldValue == 0 && newValue == 1){
                 // Changing from on to off...do something?
-				DonationsPanel.setActiveItem(donationListWrapper,{
+				DonationsPanel.setActiveItem('joplindonationlistwrapper',{
 		            type: 'slide', 
 		            direction: 'right'
 		        });
@@ -246,8 +246,34 @@ var DonationListTemplate = new Ext.XTemplate(
     '</div>'
     );
 var DonationDetailsTemplate = new Ext.XTemplate(
-    '{firstName} {lastName} donated {donation}. {time}{SMHD} ago'
-    );
+   	'<div class="donationDetail_container">',
+	
+		'<div class="donationDetail">',
+		
+			'<div class="donationDetailPicture">',
+				'<img src="{profilPicture}" width="39" height="39" border="0">',
+			'</div>',
+			
+			'<div class="donator_name_detail"><b>{firstName} {lastName}</b>',
+				'<div class="donation_detail_date">{time}{SMHD} ago </div>',
+			'</div>',
+							
+				'<div class="donation_detail_right">',
+					'<div class="donator_donation_detail">{typeOfActivity} <b>{activityName}</b> {badge}</div>',
+					'<div class="donator_donation_comment">{donationComment}</div>',
+				'</div>',
+			
+				'<div class="donator_donation_comment_icon"></div>',
+		'</div>',	
+			
+		'<div class="donation_action_button_container">',
+			'<div class="donation_detail_like_btn">like</div>',
+			'<div class="donation_detail_comment_btn">comment</div>',
+			'<div class="donation_detail_share_btn">share</div>',
+		'</div>',	
+							
+	'</div>'
+);
 
 ///////////////////////////////////////////////////////
 //				PAYEMENT PROCESS PANEL				 //
@@ -388,7 +414,7 @@ var donationDetailsToolbar = new Ext.Toolbar({
         handler: function() {
             var joplin = '<div style="font-size:.7em;">Joplin Tornado - USA</div>';
             donationDetailsToolbar.setTitle(joplin);
-            DonationsPanel.setActiveItem('listwrapper',{
+            DonationsPanel.setActiveItem('joplindonationlistwrapper',{
                 type: 'slide', 
                 direction: 'right'
             });
@@ -404,14 +430,6 @@ var donationDetailsToolbar = new Ext.Toolbar({
     }],
 });
 
-// Donation Detail
-var donationdetailPanel = new Ext.Panel({
-    layout: 'fit',
-    style: 'background:#DDDDDD',
-    id: 'detailpanel',
-    tpl: DonationDetailsTemplate
-});
-
 // Donation List
 var donationList = new Ext.List({
     id: 'donationList',
@@ -423,16 +441,18 @@ var donationList = new Ext.List({
     onItemDisclosure: function(record) {													// Once a donation is tapped
         var donationDetailsTitle = '<div style="font-size:.5em;">' + record.data.firstName + " " + record.data.lastName + "'s donation </div> " ; // title var
         donationDetailsToolbar.setTitle(donationDetailsTitle);								// Changed the toolbar title
-        donationdetailPanel.update(record.data);  											// Update the detail panel
-        DonationsPanel.setActiveItem(donationdetailPanel,{
-            type: 'slide', 
-            direction: 'left'
-        }); // Set this tapped item															
+        DonationsPanel.setActiveItem(donationdetailPanel,{type: 'slide', direction: 'left'});														
+        donationdetailPanel.update(record.data);  		
         DisasterPanel.hide();
         LatestHeader.hide();
     },
 });
 
+// Donation Detail
+var donationdetailPanel = new Ext.Panel({
+    layout: 'fit',
+    tpl: DonationDetailsTemplate,
+});
 // Story List
 var storyList = new Ext.List({
     id: 'storyList',
@@ -442,20 +462,19 @@ var storyList = new Ext.List({
     grouped: false,
     scroll: false,
     onItemDisclosure: function(record) {
-        
     }
 });
 
 // Donation List Wrapper
 var donationListWrapper = new Ext.Panel({
-    id: 'listwrapper',
+    id: 'joplindonationlistwrapper',
     layout: 'fit',
     items: [donationList],
 });
 
 // Story List Wrapper
 var storyListWrapper = new Ext.Panel({
-    id: 'storylistwrapper',
+    id: 'joplinstorylistwrapper',
     layout: 'fit',
     items: [storyList],
 });
@@ -481,7 +500,6 @@ var joplinContainer = new Ext.Panel({
 
 //  1ST MAIN FEED SCREEN ////////////////////////////
 var disasterFeedList = new Ext.Panel ({
-	width: 320,
 	scroll: 'vertical',
 	items: [MAIN_Joplin,MAIN_Haiti,MAIN_Tohoku,MAIN_Van]
 });
